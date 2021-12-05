@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>TFA103_01</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>ReadersGarden</welcome-file>
+	</welcome-file-list>
+
+	<resource-ref>
+		<description>MySQL DB Connection</description>
+		<res-ref-name>jdbc/TestDB2</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+	<filter>
+		<filter-name>OpenSessionInViewFilter</filter-name>
+		<filter-class>com.hibernate.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>OpenSessionInViewFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<!-- <dispatcher>REQUEST</dispatcher> -->
+		<!-- <dispatcher>FORWARD</dispatcher> -->
+		<!-- <dispatcher>INCLUDE</dispatcher> -->
+		<!-- <dispatcher>ERROR</dispatcher> -->
+		<!-- <dispatcher>ASYNC</dispatcher> -->
+	</filter-mapping>
+
+	<filter>
+		<filter-name>HomeFilter</filter-name>
+		<filter-class>com.home.filter.HomeFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>HomeFilter</filter-name>
+		<url-pattern>/borrow/borrowManager.jsp</url-pattern>
+		<url-pattern>/Stock/HibernateStockManager.jsp</url-pattern>
+		<url-pattern>/Stock/HibernateStockManagerUpdate.jsp</url-pattern>
+		<url-pattern>/vendor/vendorBackend.jsp</url-pattern>
+		<url-pattern>/vendor/vactBackend.jsp</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+		<dispatcher>ASYNC</dispatcher>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>partiFilter</filter-name>
+		<filter-class>com.partiinf.filter.partiFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>partiFilter</filter-name>
+		<url-pattern>/event/eventJoin.jsp</url-pattern>
+		<url-pattern>/event/eventAdd.jsp</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+		<dispatcher>ASYNC</dispatcher>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>VendorFilter</filter-name>
+		<filter-class>com.vendor.filter.VendorFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>VendorFilter</filter-name>
+		<url-pattern>/vendor/vendorActivity.jsp</url-pattern>
+		<url-pattern>/vendor/vendorOrder.jsp</url-pattern>
+		<url-pattern>/vendor/vendorInfo.jsp</url-pattern>
+		<url-pattern>/site/siteApply.jsp</url-pattern>
+		<url-pattern>/site/siteApplyConfirm.jsp</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+		<dispatcher>ASYNC</dispatcher>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>BorrowScheduleServlet</servlet-name>
+		<servlet-class>com.borrow.controller.BorrowScheduleServlet</servlet-class>
+		<load-on-startup>10</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BorrowScheduleServlet</servlet-name>
+		<url-pattern>/borrow/BorrowScheduleServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReadersGarden</servlet-name>
+		<servlet-class>com.home.controller.ReadersGarden</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReadersGarden</servlet-name>
+		<url-pattern>/ReadersGarden</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>StockServlet</servlet-name>
+		<servlet-class>com.stock.controller.StockServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StockServlet</servlet-name>
+		<url-pattern>/stock/StockServlet.page</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StockServletHibernate</servlet-name>
+		<servlet-class>com.stock.controller.StockServletHibernate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StockServletHibernate</servlet-name>
+		<url-pattern>/stock/StockServletHibernate.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StockManager</servlet-name>
+		<servlet-class>com.stock.controller.StockManager</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StockManager</servlet-name>
+		<url-pattern>/stock/StockManager.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StockManagerHibernate</servlet-name>
+		<servlet-class>com.stock.controller.StockManagerHibernate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StockManagerHibernate</servlet-name>
+		<url-pattern>/stock/StockManagerHibernate.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StockManagerUpdate</servlet-name>
+		<servlet-class>com.stock.controller.StockManagerUpdate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StockManagerUpdate</servlet-name>
+		<url-pattern>/stock/StockManagerUpdate.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StockManagerUpdateHibernate</servlet-name>
+		<servlet-class>com.stock.controller.StockManagerUpdateHibernate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StockManagerUpdateHibernate</servlet-name>
+		<url-pattern>/stock/StockManagerUpdateHibernate.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StockImg</servlet-name>
+		<servlet-class>com.stock.controller.StockImg</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StockImg</servlet-name>
+		<url-pattern>/stock/StockImg</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StockImgHibernate</servlet-name>
+		<servlet-class>com.stock.controller.StockImgHibernate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StockImgHibernate</servlet-name>
+		<url-pattern>/stock/StockImgHibernate</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StockAjax</servlet-name>
+		<servlet-class>com.stock.ajax.StockAjax</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StockAjax</servlet-name>
+		<url-pattern>/stock/StockAjax</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StockManagerAjax</servlet-name>
+		<servlet-class>com.stock.ajax.StockManagerAjax</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StockManagerAjax</servlet-name>
+		<url-pattern>/stock/StockManagerAjax</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BorrowAjax</servlet-name>
+		<servlet-class>com.borrow.ajax.BorrowAjax</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BorrowAjax</servlet-name>
+		<url-pattern>/borrow/BorrowAjax.order</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MemberBorrowAjax</servlet-name>
+		<servlet-class>com.borrow.ajax.MemberBorrowAjax</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberBorrowAjax</servlet-name>
+		<url-pattern>/borrow/MemberBorrowAjax.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BorrowScoreAjax</servlet-name>
+		<servlet-class>com.borrow.ajax.BorrowScoreAjax</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BorrowScoreAjax</servlet-name>
+		<url-pattern>/borrow/BorrowScoreAjax.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BorrowContentAjax</servlet-name>
+		<servlet-class>com.borrow.ajax.BorrowContentAjax</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BorrowContentAjax</servlet-name>
+		<url-pattern>/borrow/BorrowContentAjax.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BorrowServlet</servlet-name>
+		<servlet-class>com.borrow.controller.BorrowServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BorrowServlet</servlet-name>
+		<url-pattern>/borrow/BorrowServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BorrowMemberServlet</servlet-name>
+		<servlet-class>com.borrow.controller.BorrowMemberServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BorrowMemberServlet</servlet-name>
+		<url-pattern>/borrow/BorrowMemberServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StockListAjax</servlet-name>
+		<servlet-class>com.stockList.ajax.StockListAjax</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StockListAjax</servlet-name>
+		<url-pattern>/stockList/StockListAjax</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BulletinAjax</servlet-name>
+		<servlet-class>com.bulletin.ajax.BulletinAjax</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BulletinAjax</servlet-name>
+		<url-pattern>/bulletin/BulletinAjax</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MarksAjax</servlet-name>
+		<servlet-class>com.marks.ajax.MarksAjax</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MarksAjax</servlet-name>
+		<url-pattern>/marks/MarksAjax</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MarksServlet</servlet-name>
+		<servlet-class>com.marks.controller.MarksServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MarksServlet</servlet-name>
+		<url-pattern>/marks/MarksServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>VendorLogin</servlet-name>
+		<servlet-class>com.vendor.controller.VendorLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VendorLogin</servlet-name>
+		<url-pattern>/vendor/VendorLogin</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>VendorForgetPassword</servlet-name>
+		<servlet-class>com.vendor.controller.VendorForgetPassword</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VendorForgetPassword</servlet-name>
+		<url-pattern>/vendor/VendorForgetPassword</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SiteServlet</servlet-name>
+		<servlet-class>com.site.controller.SiteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SiteServlet</servlet-name>
+		<url-pattern>/site/SiteServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SiteImg</servlet-name>
+		<servlet-class>com.site.controller.SiteImg</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SiteImg</servlet-name>
+		<url-pattern>/site/SiteImg</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>VendorServlet</servlet-name>
+		<servlet-class>com.vendor.controller.VendorServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VendorServlet</servlet-name>
+		<url-pattern>/vendor/VendorServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SiteShowDes</servlet-name>
+		<servlet-class>com.site.ajax.SiteShowDes</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SiteShowDes</servlet-name>
+		<url-pattern>/site/SiteShowDes</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SiteShowCate</servlet-name>
+		<servlet-class>com.site.ajax.SiteShowCate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SiteShowCate</servlet-name>
+		<url-pattern>/site/SiteShowCate</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SiteFilter</servlet-name>
+		<servlet-class>com.site.ajax.SiteFilter</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SiteFilter</servlet-name>
+		<url-pattern>/site/SiteFilter</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>MarkRecordServlet</servlet-name>
+		<servlet-class>com.markRecord.controller.MarkRecordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MarkRecordServlet</servlet-name>
+		<url-pattern>/markRecord/MarkRecordServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>SiteOccupied</servlet-name>
+		<servlet-class>com.vendoract.ajax.SiteOccupied</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SiteOccupied</servlet-name>
+		<url-pattern>/vendoract/SiteOccupied</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>VendorActServlet</servlet-name>
+		<servlet-class>com.vendoract.controller.VendorActServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VendorActServlet</servlet-name>
+		<url-pattern>/vendoract/VendorActServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OrderServletHibernate</servlet-name>
+		<servlet-class>com.order.controller.OrderServletHibernate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderServletHibernate</servlet-name>
+		<url-pattern>/order/memberorder</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>OrderImg</servlet-name>
+		<servlet-class>com.order.controller.OrderImg</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderImg</servlet-name>
+		<url-pattern>/order/OrderImg</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>VendorTicketServlet</servlet-name>
+		<servlet-class>com.vendoract.controller.VendorTicketServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VendorTicketServlet</servlet-name>
+		<url-pattern>/ticket/VendorTicketServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>VendorActApply</servlet-name>
+		<servlet-class>com.vendoract.controller.VendorActApply</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VendorActApply</servlet-name>
+		<url-pattern>/vendoract/VendorActApply</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>VendorOrderCancel</servlet-name>
+		<servlet-class>com.vendoract.ajax.VendorOrderCancel</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VendorOrderCancel</servlet-name>
+		<url-pattern>/vendoract/VendorOrderCancel</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>VendorActImg</servlet-name>
+		<servlet-class>com.vendoract.controller.VendorActImg</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VendorActImg</servlet-name>
+		<url-pattern>/vendoract/VendorActImg</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>vendorStatus</servlet-name>
+		<servlet-class>com.vendor.ajax.vendorStatus</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>vendorStatus</servlet-name>
+		<url-pattern>/vendor/vendorStatus</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>VendorOrderAllocate</servlet-name>
+		<servlet-class>com.vendoract.ajax.VendorOrderAllocate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VendorOrderAllocate</servlet-name>
+		<url-pattern>/vendoract/VendorOrderAllocate</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>VendorOrderOne</servlet-name>
+		<servlet-class>com.vendoract.ajax.VendorOrderOne</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VendorOrderOne</servlet-name>
+		<url-pattern>/vendoract/VendorOrderOne</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>VendorActCheck</servlet-name>
+		<servlet-class>com.vendoract.ajax.VendorActCheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VendorActCheck</servlet-name>
+		<url-pattern>/vendoract/VendorActCheck</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>VendorActProgress</servlet-name>
+		<servlet-class>com.vendoract.ajax.VendorActProgress</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VendorActProgress</servlet-name>
+		<url-pattern>/vendoract/VendorActProgress</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CheckVendorActProgress</servlet-name>
+		<servlet-class>com.vendoract.ajax.CheckVendorActProgress</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckVendorActProgress</servlet-name>
+		<url-pattern>/vendoract/CheckVendorActProgress</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>NewVendorAct</servlet-name>
+		<servlet-class>com.vendoract.ajax.NewVendorAct</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewVendorAct</servlet-name>
+		<url-pattern>/vendoract/NewVendorAct</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>VendorActResultEmail</servlet-name>
+		<servlet-class>com.vendoract.ajax.VendorActResultEmail</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VendorActResultEmail</servlet-name>
+		<url-pattern>/vendoract/VendorActResultEmail</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ArticleServlet</servlet-name>
+		<servlet-class>com.article.controller.ArticleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ArticleServlet</servlet-name>
+		<url-pattern>/article/ArticleServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MemberServlet</servlet-name>
+		<servlet-class>com.member.controller.MemberServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberServlet</servlet-name>
+		<url-pattern>/member/MemberServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EventServlet</servlet-name>
+		<servlet-class>com.event.controller.EventServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EventServlet</servlet-name>
+		<url-pattern>/event/EventServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>partiServlet</servlet-name>
+		<servlet-class>com.partiinf.controller.partiServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>partiServlet</servlet-name>
+		<url-pattern>/partiinf/partiServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EventlistServlet</servlet-name>
+		<servlet-class>com.eventlist.controller.EventlistServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EventlistServlet</servlet-name>
+		<url-pattern>/eventlist/EventlistServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.login.controller.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login/LoginServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LoginServlet2</servlet-name>
+		<servlet-class>com.login.controller.LoginServlet2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet2</servlet-name>
+		<url-pattern>/login/LoginServlet2</url-pattern>
+	</servlet-mapping>
+
+
+
+	<error-page>
+	<error-code>
+	400
+	</error-code>
+	<location>
+	/home/home.jsp
+	</location>
+	</error-page>
+
+	<error-page>
+	<error-code>
+	404
+	</error-code>
+	<location>
+	/home/home.jsp
+	</location>
+	</error-page>
+
+	<error-page>
+	<error-code>
+	500
+	</error-code>
+	<location>
+	/home/home.jsp
+	</location>
+	</error-page>
+
+	<error-page>
+	<exception-type>
+	javax.servlet.ServletException
+	</exception-type>
+	<location>
+	/home/home.jsp
+	</location>
+	</error-page>
+
+	
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.register.controller.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/register/RegisterServlet</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>UpdateServlet</servlet-name>
+		<servlet-class>com.update.controller.UpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateServlet</servlet-name>
+		<url-pattern>/update/UpdateServlet</url-pattern>
+	</servlet-mapping>
+
+	
+		<servlet>
+		<servlet-name>UpdatePasswordServlet</servlet-name>
+		<servlet-class>com.update.controller.UpdatePasswordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdatePasswordServlet</servlet-name>
+		<url-pattern>/update/UpdatePasswordServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>memberForgetPassword</servlet-name>
+		<servlet-class>com.login.controller.memberForgetPassword</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>memberForgetPassword</servlet-name>
+		<url-pattern>/login/memberForgetPassword</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>

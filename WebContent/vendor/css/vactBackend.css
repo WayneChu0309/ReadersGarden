@@ -1,0 +1,472 @@
+body {
+	background-image: url("../image/bg.png");
+	background-size: cover;
+	background-position: center center;
+}
+
+
+section#manager_area{
+	background-color: rgba(255, 255, 255, .8);
+}
+
+section#manager div.action input {
+	height: 30px;
+	width: 350px;
+	text-align: center;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	transition: all .3s;
+	margin-left: 90px;
+}
+
+section#manager div.action input[type="text"]:focus {
+	transform: scale(1.1);
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, .8);
+}
+
+section#manager div.action button.btn {
+	width: 120px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #cd5c5c;
+	letter-spacing: 2px;
+	color: white;
+	border: none;
+	cursor: pointer;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+	margin-left: 10px;
+}
+
+section#manager div.action button.unableselect{
+		background-color: gray;
+		cursor: default;
+}
+
+section#manager div.action button.allsubmit{
+	width: 60px;
+}
+
+section#manager {
+	max-width: 1300px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	min-height: calc(100vh - 310px);
+}
+
+section#manager div.action {
+	margin: 30px 0 0 50px;
+	position: relative;
+}
+
+section#manager div.action #progress_select{
+	position: absolute;
+	top: 35px;
+	right: 385px;
+	background-color: transparent;
+	border:none;
+	border-bottom: 1px solid lightgray;
+}
+
+section#manager div.action #site_select{
+	position: absolute;
+	top: 35px;
+	right: 238px;
+	background-color: transparent;
+	border:none;
+	border-bottom: 1px solid lightgray;
+}
+
+section#manager div.action .-none{
+	display: none;
+}
+
+section#manager div.action form{
+	display: inline-block;
+	position: relative;
+}
+
+section#manager div.action .errorMsgs {
+	position: absolute;
+	top: -20px;
+	left: 470px;
+	font-size: 12px;
+	color: red;
+	
+}
+
+section#manager div.choice {
+	margin-top: 60px;
+	position: relative;
+}
+
+section#manager div.choice button {
+	background-color: #949494;
+	letter-spacing: 2px;
+	color: white;
+	border: 1.5px solid lightgray;
+	cursor: pointer;
+	padding: 3px;
+	width: 30px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px lightgray;
+}
+
+section#manager div.choice li.unable button{
+	cursor: pointer;
+}
+
+section#manager div.choice li.okay button{
+	background-color: #73e69b;
+	color: white;
+	font-weight: 800;
+	cursor: default;
+}
+
+section#manager div.choice li.stop button{
+	background-color: #ff6060;
+	color: white;
+	font-weight: 800;
+	cursor: default;
+}
+
+
+section#manager div.choice button.checkall{
+	position: absolute;
+	top: -30px;
+	right: 70px;
+}
+
+section#manager div.choice button.allsubmit{
+	position: absolute;
+	top: -30px;
+	right:160px;
+}
+
+section#manager div.choice div.orderitems {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 2rem;
+}
+
+section#manager div.choice div.orderitems h1 {
+	font-size: 36px;
+	color: red;
+}
+
+section#manager div.choice div.orderitems ul {
+	width: 100%;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+}
+
+section#manager div.choice div.orderitems ul.title li {
+	background-color: white;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+	color: #008080;
+}
+
+section#manager div.choice div.orderitems ul li {
+	font-size: 14px;
+	width: 130px;
+	text-align: center;
+	word-break: break-all;
+	flex-shrink: 0;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px 0 1px 1px;
+	padding: 3px;
+}
+
+section#manager div.choice div.orderitems .vactid{
+	width: 90px;
+}
+
+section#manager div.choice div.orderitems .detail{
+	width: 120px;
+}
+section#manager div.choice div.orderitems li.detail h3{
+	color: blue;
+	cursor: pointer;
+	text-decoration: underline;
+	font-weight: 500;
+	display: inline-block;
+}
+
+section#manager div.choice div.orderitems li.change h3{
+	color: blue;
+	cursor: pointer;
+	text-decoration: underline;
+	font-weight: 500;
+	display: inline-block;
+}
+
+section#manager div.choice div.orderitems li.progress{	
+	font-weight: 800;
+}
+
+section#manager div.choice div.orderitems ul li.update, section#manager div.choice div.orderitems ul li.move
+	{
+	width: 65px;
+}
+
+section#manager div.choice div.orderitems ul li #status{
+	font-size: 20px;
+}
+
+section#manager div.choice div.orderitems ul li:last-child {
+	border-right: 1px solid black;
+}
+
+section#manager div.choice div.orderitems ul.orderitem li {
+	
+}
+
+section#manager div.choice div.orderitems ul.orderitem li.stockname {
+	position: relative;
+	cursor: pointer;
+}
+
+section#manager div.choice div.orderitems ul.orderitem li.stockname:hover span
+	{
+	display: block;
+}
+
+section#manager div.choice div.orderitems ul.orderitem li.stockname span
+	{
+	display: none;
+	width: 200px;
+	position: absolute;
+	top: 40px;
+	left: -20px;
+	padding: 3px;
+	background-color: white;
+	z-index: 10;
+}
+
+section#manager div.choice div.orderitems ul.orderitem li.stockname span::before
+	{
+	position: absolute;
+	content: '';
+	border: 20px;
+	border-style: solid;
+	border-color: transparent transparent white transparent;
+	top: -40px;
+	left: calc(50% - 20px);
+}
+
+section#manager div.choice div.orderitems ul.orderitem li.listid select
+	{
+	font-size: 16px;
+	width: 80%;
+	text-align: center;
+}
+
+section#manager div.choice div.orderitems ul.orderitem input[type="text"]
+	{
+	font-size: 16px;
+	width: 80%;
+	text-align: center;
+	border: none;
+	outline:none;
+	transition: all .3s;
+}
+
+section#manager div.choice div.orderitems ul.orderitem input[type="text"]:focus {
+	transform: scale(1.2);
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, .8);
+}
+
+section#manager div.choice div.orderitems ul.orderitem input[type="checkbox"]
+	{
+	width: 40px;
+	height: 20px;
+	transform: translateY(9px);
+}
+
+section#manager div.choice div.orderitems .-none{
+	display: none;
+}
+
+section#manager form.memberform{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+section#manager form.memberform p{
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: #4169e1;
+}
+
+section#manager div.action form.memberform button{
+  background-color:transparent;
+  border: none;
+  color:#008080;
+  box-shadow: none;
+  border-radius: 0;
+  width: 200px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@keyframes animate {
+    0%{
+        transform: scale(1);
+    }
+    80%,100%{
+        transform: scale(0);
+    }
+}
+
+
+.pop_bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000000;
+    opacity: 0.3;
+    z-index: 1000;
+    display: none;
+    }
+
+.pop_item{
+    position: fixed;
+    width: 750px;
+    height: 520px;
+    left: 23%;
+    top: 5%;
+    z-index: 1002;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px gray;
+    display: none;
+    
+}
+
+.pop_content{
+	height: 500px;
+	overflow-y: scroll;
+	margin-top: 20px;
+	padding: 20px 100px;   
+	
+}
+
+.pop_item h2{
+	text-align: center;
+	font-size: 28px;
+	letter-spacing: 15px;
+	font-weight: 500;
+/* 	margin-bottom: 1rem; */
+}
+
+.pop_item h3{
+	float: right;
+	font-size: 14px;
+	margin-bottom: 1rem;
+}
+.pop_item hr{
+	border: none;
+	border-bottom: 0.6px solid black;
+	margin-bottom: 1rem;
+}
+
+.pop_item h4{
+	margin-top: 1.5rem;
+	font-size: 18px;
+	font-weight: 500;	
+}
+
+.pop_item h5{
+	display:inline-block;
+	line-height: 1.8rem;
+	font-weight: 500;
+/* 	margin-left: 2.5rem; */
+}
+
+.pop_item span{
+	margin-left: .6rem;
+	font-size: 14px;
+}
+
+.pop_item #pop_img{
+	max-width: 500px;
+}
+
+.pop_item .cnt{
+	margin-top: 1rem;
+	font-weight: 800;
+}
+
+div#vendoract_check{
+	border: 1px solid #e1e1e1;
+	padding: 1rem;
+	margin-top: 2rem;
+}
+
+div#vendoract_check h4{
+	font-size: 20px;
+	font-weight: 800;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+.pop_item #close_btn{
+	width: 50px;
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	cursor: pointer;
+	opcacity: 0.8;
+	background-color: white;
+	border: 1px solid lightgray;
+	opacity: .6;
+}
+
+.pop_item #result_submit {
+	display: inline-block;
+	margin: 0px 5px 8px 20px;
+    border-radius: 2px;
+    border: 1px solid #A7A7A7;
+    font: 15px/26px Microsoft JhengHei, sans-serif;
+    color: #000000;
+    cursor: pointer;
+    padding: 0px 10px;
+    background: linear-gradient(#F5F5F5, #E0E0E0);
+    position: relative;
+    vertical-align: center;
+    text-align: center;
+    width: auto;
+    box-sizing: border-box;
+    height: 25px;
+}
+
+.pop_item #result_message {
+	width: 500px;
+	height: 200px;
+	resize: none;
+	display: none;
+}
+
+.pop_item #alert_message {
+	font-size: 14px;
+	font-weight: 500;
+	color:red;
+	display: none;
+}

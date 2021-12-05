@@ -1,0 +1,96 @@
+/* join start */
+
+section.join {
+    margin-bottom: 40px;
+}
+
+section.join .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.join .activity {
+	width: 70%;
+    height: max-content;
+    padding: 24px 60px;
+    margin-top: 24px;
+    background-color: rgb(255, 255, 255, 0.6);
+    border-radius: 20px;
+}
+
+section.join .activity h1 {
+	font-weight: var(--heavy-font-weight); 
+	color: #C80815;
+	margin: 20px 0px;
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+section.join .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.join .content table {
+    width: 80%;
+    margin: 40px 0 60px 0;
+}
+
+section.join td {
+    padding: 8px 24px;
+    letter-spacing: 0.2em;
+    vertical-align: top;
+}
+
+section.join td:first-of-type {
+    white-space: nowrap;
+}
+
+section.join td:last-of-type {
+    background-color: var(--light-color);
+}
+
+section.join tr:first-of-type td {
+    border-radius: 20px 20px 0 0;
+    padding-top: 24px;
+}
+
+section.join tr:last-of-type td {
+    border-radius: 0 0 20px 20px;
+    padding-bottom: 24px;
+}
+
+section.join .btns, section.create .btns {
+    display: flex;
+    align-items: center;
+}
+
+section.join .btn-filled, section.create .btn-filled {
+    width: 200px;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-color);
+}
+
+section.join .btn-filled:first-of-type, section.create .btn-filled:first-of-type {
+    background-color: var(--subtext-color);
+}
+
+section.join .btn-filled:last-of-type, section.create .btn-filled:last-of-type {
+	border:none;
+/* 	margin-left: 16px; */
+    margin-right: 16PX;
+    background-color: var(--main-color);
+}
+
+section.join .btn-filled:hover, section.create .btn-filled:hover {
+    background-color: var(--selected-color);
+}
+
+/* join end */
+

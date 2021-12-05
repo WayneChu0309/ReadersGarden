@@ -1,0 +1,315 @@
+body {
+	background-image: url("../image/bg.png");
+	background-size: cover;
+	background-position: center center;
+}
+
+
+div.stockorder{
+    width:400px;
+    padding: 10px;
+    background: white;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+    border-radius: 10px;
+    z-index: 40;
+    overflow: auto;
+    margin:100px auto 0;
+    /* display: none; */
+}
+
+div.stockorder div.container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 500px;
+    overflow-y:auto;
+}
+
+div.stockorder div.container ul{
+    width: 320px;
+    border: 6px double rgb(196, 196, 196);
+    background-color: whitesmoke;
+    position: relative;
+    max-height: 50px;
+    overflow: hidden;
+    transition: all .3s linear;
+    margin-bottom: 5px;
+}
+
+div.stockorder div.container ul input[type="checkbox"]{
+    display: none;
+}
+
+div.stockorder div.container ul > label {
+    height: 30px;
+    width: 30px;
+    margin: auto;
+    background-color: transparent;
+    border:1px solid #708090;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+}
+
+div.stockorder div.container ul > label span{
+    display: block;
+    width: 15px;
+    height: 2px;
+    background-color: #708090;
+    position: relative;
+    left: 0;
+    top:50%;
+    margin: auto;    
+}
+
+div.stockorder div.container ul > label span::before,
+div.stockorder div.container ul > label span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #708090;
+}
+
+div.stockorder div.container ul > label span::before{
+    transform: translateY(-6px);
+}
+
+div.stockorder div.container ul > label span::after{
+    transform: translateY(6px);
+}
+
+
+div.stockorder div.container ul input[type="checkbox"]:checked ~ label span{
+    background-color:transparent;
+ }
+
+ div.stockorder div.container ul input[type="checkbox"]:checked ~ label span::after{
+    transform: rotate(45deg);
+ }
+
+ div.stockorder div.container ul input[type="checkbox"]:checked ~ label span::before{
+    transform: rotate(-45deg);
+ }
+
+
+
+
+div.stockorder div.container ul li{
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin: 0 auto;
+    letter-spacing: 2px;
+}
+
+div.stockorder div.container ul li.submit{
+    height: 60px;
+    border:none;
+}
+
+div.stockorder div.container ul li:nth-of-type(1){
+    display:none;
+}
+
+div.stockorder div.container ul li.stockName{
+    cursor: pointer;
+    position: relative;
+}
+
+div.stockorder div.container ul li.stockName span{
+    position: absolute;
+    width: 100%;
+    top: 45px;
+    left: 0px;
+    display: none;
+    background-color: #708090;
+    z-index: 60;
+    padding: 10px;
+}
+
+div.stockorder div.container ul li.stockName span p{
+    word-break: break-all;
+    line-height: 16px;
+}
+
+div.stockorder div.container ul li.stockName span::before{
+    position: absolute;
+	content: '';
+	border: 20px;
+	border-style: solid;
+	border-color: transparent transparent #708090 transparent;
+	top: -40px;
+	left: calc(50% - 20px);
+}
+
+
+div.stockorder div.container ul > input[type="checkbox"]:checked ~ li.stockName:hover span{
+    display: block;
+}
+
+div.stockorder div.container ul li.stockName span img{
+    max-width: 100%;
+}
+
+div.stockorder div.container ul li.content{
+    position: relative;
+    height: 60px;
+}
+div.stockorder div.container ul li.scoretitle{
+	border-bottom: none;
+}
+/* div.stockorder div.container ul li.score{ */
+/*     height: 40px; */
+/* } */
+div.stockorder div.container ul li.score div.control{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+div.stockorder div.container ul li textarea{
+    text-align: center;
+    position:absolute;
+    width: 100%;
+    height: 53px;
+    line-height: 47px;
+    resize: none;
+    outline: none;
+    border: none;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    border:1px solid black;
+    margin-top: 3px;
+    transition: all .5s;
+}
+
+div.stockorder div.container ul li textarea::placeholder{
+    color: rgb(196, 196, 196);
+}
+
+div.stockorder div.container ul li textarea:focus{
+    height: 200px;
+    border:4px double rgb(196, 196, 196);
+}
+
+div.stockorder div.container ul li textarea:focus::placeholder{
+    color: black;
+}
+
+div.stockorder div.container ul li.score input{
+    display: none;
+}
+
+div.stockorder div.container ul li.score input:nth-child(1):checked ~ div.control label:nth-child(1){
+    animation:star .5s linear;
+    background-image: url(../image/fullstar.svg);
+    filter: invert(85%) sepia(10%) saturate(5435%) hue-rotate(359deg) brightness(103%) contrast(104%);
+}
+
+div.stockorder div.container ul li.score input:nth-child(2):checked ~ div.control label:nth-child(-n+2){
+    animation:star .5s linear;
+    background-image: url(../image/fullstar.svg);
+    filter: invert(85%) sepia(10%) saturate(5435%) hue-rotate(359deg) brightness(103%) contrast(104%);
+}
+
+div.stockorder div.container ul li.score input:nth-child(3):checked ~ div.control label:nth-child(-n+3){
+    animation:star .5s linear;
+    background-image: url(../image/fullstar.svg);
+    filter: invert(85%) sepia(10%) saturate(5435%) hue-rotate(359deg) brightness(103%) contrast(104%);
+}
+
+div.stockorder div.container ul li.score input:nth-child(4):checked ~ div.control label:nth-child(-n+4){
+    animation:star .5s linear;
+    background-image: url(../image/fullstar.svg);
+    filter: invert(85%) sepia(10%) saturate(5435%) hue-rotate(359deg) brightness(103%) contrast(104%);
+}
+
+div.stockorder div.container ul li.score input:nth-child(5):checked ~ div.control label{
+    animation:star .5s linear;
+    background-image: url(../image/fullstar.svg);
+    filter: invert(85%) sepia(10%) saturate(5435%) hue-rotate(359deg) brightness(103%) contrast(104%);
+}
+
+@keyframes star {
+    0%,100%{
+        transform: scale(1) rotateY(0deg);
+    }
+
+    50%{
+        transform: scale(1.5) rotateY(180deg);
+    }
+}
+
+
+div.stockorder div.container ul li.score label{
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../image/emptystar.svg);
+    background-size:cover;
+    background-position: center center;
+    transition: all .3s;
+}
+
+div.stockorder div.container ul li.submit button{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    color: #708090;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background-color: #708090;
+    transition: all .3s;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+div.stockorder div.container ul li.submit button:disabled{
+	cursor: not-allowed;
+}
+
+div.stockorder div.container ul li.submit button::after,
+div.stockorder div.container ul li.submit button::before{
+    content: "";
+    position: absolute;
+    background-color: #bec7c2;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: -1;
+    transition: all .5s ease;
+    border-radius: 10px;
+}
+
+div.stockorder div.container ul li.submit button:hover::after{
+    transform: scale(1,0);
+}
+
+div.stockorder div.container ul li.submit button:hover::before{
+    transform: scale(0,1);
+}
+
+
+div.stockorder div.container ul li.submit button:hover{
+    background-color: #708090;
+    transform: scale(.8);
+    color: white;
+}

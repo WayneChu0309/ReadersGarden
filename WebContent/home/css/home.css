@@ -1,0 +1,315 @@
+body{
+    background-image: url("../image/bg.png");
+    background-size: cover;
+    background-position: center center; 
+}
+
+
+/* latest-news start */
+
+.latest-news{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.latest-news .container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.latest-news img{
+    position: absolute;
+    width:200px;
+    top: -60px;
+    left:50%;
+}
+
+
+.latest-news h1{
+    position: absolute;
+    font-size: 3rem;
+    font-weight:300;
+    letter-spacing: 2px;
+    top: 10px;
+    left:calc(50% + 170px);
+}
+
+.latest-news h3{
+	font-family: 'Noto Sans TC', sans-serif;
+    position: absolute;
+    font-size: 25px;
+    font-weight:300;
+    letter-spacing: 2px;
+    top: 65px;
+    left:calc(50% + 280px);
+}
+
+/* latest-news end */
+
+
+/* section search start*/
+section.search .container{
+    max-width: 1400px;
+    margin: 40px auto 0;
+}
+
+section.search .container .row{
+    display: flex;
+    flex-direction: row;
+}
+
+section.search .container .row .search{
+    width: 40%;
+}
+
+section.search .container .row .title{
+    width: 60%;
+}
+
+section.search .container .row .search-bar{
+    width: 350px;
+    margin: 0 auto;
+    display: flex;
+}
+
+section.search .container .row .search-bar input{
+    width: 100%;
+    border: none;
+    background-color: white;
+    border-radius: 10px 0 0 10px ;
+    padding:10px;
+}
+
+section.search .container .row .search-bar button{
+    border: none;
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+    padding: auto 0;
+    cursor: pointer;
+}
+
+section.search .container .row .search-bar button img{
+    width: 20px;
+    margin: 5px 10px 0 0;
+}
+
+
+
+section.search .container .row .title ul{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section.search .container .row .title ul li{
+    font-size: 2rem;
+    color: white;
+    width: 17.85714285714286%;
+    text-transform: capitalize;
+    background-color: black;
+    text-align: center;
+}
+
+section.search .container .row .title ul li:nth-last-of-type(odd){
+    transform: rotate(2deg);
+}
+
+section.search .container .row .title ul li:nth-last-of-type(even){
+    transform: rotate(-2deg);
+}
+/* section search end*/
+
+
+/* section info start */
+
+.info .container{
+    max-width: 1400px;
+    margin: 20px auto 0;
+}
+
+.info .container .row{
+    display: flex;
+    flex-direction: row;
+}
+
+
+    /* 月曆 & 座位 start */
+.info .container .row .cal{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.info .container .row .cal .cal-items,
+.info .container .row .cal .seat{
+    width: 350px;
+    margin: 0 auto;
+}
+
+.info .container .row .cal .cal-items{
+    /* height: 240px; */
+    background-color: var(--cal-bg-color);
+    margin-top: 100px;
+    position: relative;
+}
+
+.info .container .row .cal .cal-items h4{
+    position: absolute;
+    font-size: 1.8rem;
+    color: white;
+    width: 28.58%;
+    height: 95px;
+    background-color: green;
+    top: 0;
+    left: 0;
+    transform: translateX(40%) translateY(-50%);
+    text-align: left;
+    padding: 15px;
+    line-height: 1.2;
+}
+
+.info .container .row .cal .cal-items ul{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.info .container .row .cal .cal-items ul.day{
+    margin: 60px auto 0;
+}
+
+.info .container .row .cal .cal-items ul.days{
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.info .container .row .cal .cal-items ul li.today{
+    background-color: #a9a9a9;
+    border-radius: 30px;
+}
+
+.info .container .row .cal .cal-items ul li{
+    width: 14.28571428571429%;
+    font-size: .6rem;
+    padding: 3px;
+}
+
+.info .container .row .cal .cal-items ul.day li{
+    font-weight: bold;
+}
+
+.info .container .row .cal .cal-items ul.days li{
+    font-weight:300;
+}
+
+.info .container .row .cal .seat{
+    background-color: var(--cal-bg-color);
+    margin-top: 20px;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.info .container .row .cal .seat .text-time{
+    margin: auto 0;
+}
+
+.info .container .row .cal .seat h3{
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 2rem;
+}
+
+.info .container .row .cal .seat p{
+    font-size: .5rem;
+    font-weight: 300;
+}
+
+.info .container .row .cal .seat h2{
+    text-align: center;
+    line-height: 120px;
+    font-size: 3rem;
+    margin-right: 30px;
+    margin-left: 20px;
+}
+
+    /* 月曆 & 座位 end */
+
+    /* 最新消息 start */
+.info .container .row .news{
+    width: 60%;
+}
+
+.info .container .row .news .new-event,
+.info .container .row .news .new-group,
+.info .container .row .news .new-bulletin{
+    width: 90%;
+    /* height: 150px; */
+    background-color: var(--news-bg-color);
+    margin-bottom: 20px;
+    padding-top:20px;
+}
+
+.info .container .row .news a{
+    display: block;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.info .container .row .news textarea{
+	display: block;
+	border:none;
+	outline:none;
+	background-color:transparent;
+	resize:none;
+}
+
+.info .container .row .news textarea.add{
+	background-color:white;
+	border:1px solid black;
+}
+
+.info .container .row .news h2,
+.info .container .row .news h3,
+.info .container .row .news a,
+.info .container .row .news textarea{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.info .container .row .news h2{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.info .container .row .news h3{
+    font-size: 1.2rem;
+}
+
+.info .container .row .news .new-bulletin button{
+	cursor:pointer;
+	border-radius: 5px;
+	background-color: green;
+	letter-spacing: 2px;
+	color: var(--news-bg-color);
+	border: none;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+	transition: all .3s;
+	padding:0 2px;
+}
+
+.info .container .row .news .new-bulletin button:hover{
+	transform:scale(0.9);
+}
+    /* 最新消息 end */
+
+/* section info end */

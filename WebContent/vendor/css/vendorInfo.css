@@ -1,0 +1,280 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap')
+	;
+
+body {
+	background-image: url("../image/bg.png");
+	background-size: cover;
+	background-position: center center;
+	overflow-y: auto;
+}
+
+/* content start*/
+.content_row {
+	margin-top: 130px;
+	margin-bottom: 100px;
+	display: flex;
+}
+
+.content_left {
+	width: 200px;
+	margin: 0 auto;
+}
+
+.content_right {
+	width: 1100px;
+	padding: 0 5rem;
+}
+
+.content_label {
+	width: 180px;
+	background-color: white;
+	margin: 0 0 2rem 2rem;
+	padding: 1rem 0;
+	text-align: center;
+	border-radius: 3px;
+	letter-spacing: 0.5rem;
+	display: block;
+	box-shadow: 1px 1px 3px rgb(143, 143, 143);
+	color: lightseagreen;
+	font-weight: 800;
+}
+
+.content_label:hover {
+	color: #707070;
+	font-weight: 800;
+}
+
+.now_choice, .now_choice:hover {
+	font-weight: 800;
+	color: lightseagreen;
+	cursor: default;
+	position: relative;
+	background-color: white;
+}
+
+.now_choice::after {
+	display: block;
+	content: "";
+	background-color: lightseagreen;
+	border-radius: 0 3px 3px 0;
+	height: 100%;
+	width: 15px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.edit_zone {
+	border-bottom: 1.2px solid rgb(170, 168, 168);
+	margin-bottom: 1rem;
+	background-color: rgb(228, 228, 228, 0.2);
+	padding: 10px 15px;
+	border-radius: 5px;
+	width: 900px;
+}
+
+.vendor_info .info_edit {
+	font-size: 18px;
+	margin-right: 5rem;
+	font-weight: 500;
+	color: white;
+	text-shadow: 1px 1px 3px rgb(94, 94, 94);
+}
+
+.vendor_info .edit_active {
+	text-shadow: 1px 1px 2px rgb(240, 240, 240);
+	border-bottom: 1.8px solid rgb(10, 143, 136);
+	padding-bottom: 10px;
+	color: rgb(10, 143, 136);
+	font-weight: 800;
+	cursor: default;
+}
+
+.container_el {
+	background-color: whitesmoke;
+	padding: 2.5rem;
+	border-radius: 3px;
+	width: 900px;
+}
+
+.info_zone {
+	background-color: white;
+	border-radius: 3px;
+	padding: 2rem;
+	margin: 0 auto;
+}
+
+.info_zone h5 {
+	font-size: 1.5rem;
+	color: #707070;
+	margin-bottom: .5rem;
+}
+
+.info_zone h6 {
+	display: inline-block;
+	color: red;
+	font-size: 12px;
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
+
+.password_alert {
+	font-size: 12px;
+	color: red;
+}
+
+.info_zone label {
+	font-size: 14px;
+}
+
+.info_zone .info_label {
+	margin-bottom: 1.2rem;
+	margin-right: 0.2rem;
+	display: inline-block;
+	font-size: 14px;
+}
+
+.info_zone #vcompany, .info_zone #vtaxid {
+	margin-right: 1.5rem;
+	font-size: 14px;
+}
+
+.info_zone input[type="text"], .info_zone input[type="password"] {
+	padding: 0rem 0.3rem;
+	width: 40%;
+	margin-left: 2rem;
+	margin-bottom: 1.2rem;
+	font-size: 14px;
+}
+
+/* 地址欄 */
+#twzipcode {
+	display: inline-block;
+	margin-left: 2rem;
+}
+
+.city {
+	display: inline-block;
+	margin-right: 0.5rem;
+	font-size: 15px;
+}
+
+.town {
+	display: inline-block;
+	font-size: 15px;
+}
+
+#detail_addr_input {
+	margin-left: 0.5rem;
+}
+
+.container_el .btn_div_password {
+	width: 160px;
+	margin: 0 auto;
+}
+
+.error_msgs {
+	font-size: 12px;
+	color: red;
+}
+
+.container_el .btn_div {
+	width: 350px;
+	margin: 0 auto;
+	display: flex;
+}
+
+.container_el #info_btn {
+	display: none;
+}
+
+.container_el #confirm_edit {
+	width: 160px;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+	color: white;
+	font-weight: 800;
+	background-color: lightseagreen;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	margin: 1rem auto;
+	text-align: center;
+}
+
+.container_el #reset_action {
+	width: 160px;
+	height: 40px;
+	line-height: 40px;
+	font-weight: 800;
+	display: inline-block;
+	color: lightseagreen;
+	background-color: white;
+	border: 1.8px solid lightseagreen;
+	border-radius: 3px;
+	cursor: pointer;
+	margin: 1rem 1rem 0 auto;
+	text-align: center;
+	font-weight: 800;
+}
+
+.container_el #password_btn {
+	width: 160px;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+	color: white;
+	font-weight: 800;
+	background-color: lightseagreen;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	margin: 1rem auto;
+	text-align: center;
+}
+
+.pop_bg {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: black;
+	opacity: 0.2;
+	  display: none;
+}
+
+.pop_alert {
+	position: fixed;
+	width: 380px;
+	height: 220px;
+	z-index: 1002;
+	left: 50%;
+	top: 50%;
+	padding: 40px 60px;
+	margin-left: -160px;
+	margin-top: -150px;
+	z-index: 1002;
+	background-color: white;
+	box-shadow: 1px 1px 3px rgb(228, 228, 228);
+	border-radius: 5px;
+	border: 10px solid rgb(187, 187, 187, 0.5);
+	  display: none;
+}
+
+.pop_alert h3 {
+	margin-bottom: 0.5rem;
+	margin-top: 0.5rem;
+	font-size: 20px;
+	text-align: center;
+}
+
+.pop_alert h4 {
+	font-size: 20px;
+	color: rgb(180, 75, 75);
+	margin-bottom: 4rem;
+	text-align: center;
+}

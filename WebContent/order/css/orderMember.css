@@ -1,0 +1,28 @@
+body {
+	background-image: url("../image/bg.png");
+	background-size: cover;
+	background-position: center center;
+}
+
+
+div.container-box{
+    width:800px;
+    padding: 10px;
+    background: white;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+    border-radius: 10px;
+    z-index: 40;
+    overflow: auto;
+    margin:100px 0PX 10PX 400px;
+    /* display: none; */
+}
+
+div.container-box div.container{
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 500px;
+}
+
+

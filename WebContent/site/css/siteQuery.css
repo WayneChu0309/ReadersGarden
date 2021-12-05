@@ -1,0 +1,1036 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap');
+
+:root{
+    --clist-width:14.2857142857143%;
+}
+
+body{
+    background-image: url("../image/bg.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+/* latest-news start */
+
+.latest-news{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.latest-news .container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.latest-news img{
+    position: absolute;
+    width:200px;
+    top: -60px;
+    left:50%;
+}
+
+
+.latest-news h1{
+  position: absolute;
+  font-size: 48px;
+  font-weight:300;
+  letter-spacing: 2px;
+  top: 10px;
+  left:calc(50% + 170px);
+}
+
+.latest-news h3{
+position: absolute;
+font-size: 25px;
+font-weight:300;
+letter-spacing: 2px;
+top: 65px;
+left:calc(50% + 260px);
+}
+
+/* latest-news end */
+
+/*************************** Step1選場地 **********************************/
+
+#cal_row{
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+.left{
+  width: 60%;
+}
+
+.right{
+  width: 40%;
+}
+
+/* 場地資訊 */
+
+.element_site{
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 8rem;
+  margin-bottom: 1.5rem;
+  width: 80%;
+  height: 346px;
+  box-shadow: 2px 2px 10px rgb(78, 134, 101);
+}
+
+.step1{
+  margin: 1.6rem 0.5rem 2.5rem 0;
+  display: inline-block;
+  color: #59a169;
+  font-size: 1.68rem;
+ }
+
+.step_div, .img_cover, #site_btn_rwd{display: none;}
+
+.element_site select{
+  display: inline-block;
+  position: absolute;
+  top: 2.2rem;
+  left: 16rem;
+}
+
+.site_des{
+  width: 50%;
+  list-style:circle;
+  text-align: left;
+  padding: 0.3rem 3rem;
+  /* margin-bottom: 0.5rem; */
+  color: #707070;
+  position: relative;
+  
+}
+
+
+.site_des li{
+  margin-top: 0.2rem;
+  margin-left: 1.3rem;
+  font-weight: 800;
+  list-style-type: disc;
+}
+
+.site_btn{
+  position:absolute;
+  right: 0.5rem;
+  bottom: 1.6rem;
+  width: 9rem;
+  height: 2.5rem;
+  background-color: lightseagreen;
+  border: none;
+  border-radius: 5%;
+  box-shadow: 1px 1px 2px  lightgrey;
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  text-align: center;
+}
+
+.li_img {
+  width: 45%;
+}
+
+.li_img .item{
+  height: 100%;
+}
+
+.li_img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+}
+/*************************** Step2選日期 **********************************/
+
+.cal_bg{
+  background: linear-gradient(90deg, white 0%, white 55%, rgb(240, 235, 235) 55%, rgb(240, 235, 235) 100%);
+  padding-bottom: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 80%;
+  height: 380px;
+  padding: 1rem;
+  box-shadow: 2px 2px 10px rgb(78, 134, 101);
+  display: flex;
+  position: relative;
+}
+
+.alert_div{
+  width: 14.2%;
+  height: 20px;
+  display: none;
+  position: absolute;
+  top: 275px;
+  right: 80px;
+  border-radius: 4%;
+  padding-top: 0.1rem;
+
+}
+
+.alert_div h6{
+  color:rgb(212, 87, 87);
+  font-size: 12px;
+}
+
+.alert_div_rwd{display: none;}
+
+.cal_left{
+  text-align: left;
+  width: 55%;
+  position: relative;
+}
+
+.cal_right{
+  width: 45%;
+  position: relative;
+  
+}
+
+.step2{
+  margin: 1.6rem 0 1rem 3rem;
+  display: inline-block;
+  color: #59a169;
+  font-size: 1.68rem;
+}
+
+.cal_left label{
+  margin-left: 3.2rem;
+  color: #707070;
+  font-weight: 800;
+}
+
+#change_btn{
+  display: none;
+  /* display: inline-block;
+  color: black;
+  margin-left: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.1rem 0.3rem;
+  height: 1.5rem;
+  cursor: pointer;
+  width: 3rem; */
+}
+
+#change_btn:active{
+  box-shadow: none;
+}
+
+.cal_bg h4{
+  margin: 2rem 0 0 3.2rem;
+  color: rgb(202, 73, 73);
+  /* font-size: 13px; */
+}
+
+.select_date li{
+  list-style-type: disc;
+  margin: 0.2rem 0 0 4.3rem;
+  text-align: left;
+  color: #707070;
+  font-weight: 800;
+}
+
+#clear_btn_main{
+  display: none;
+  position:absolute;
+  right: 15rem;
+  bottom: 1.6rem;
+  width: 130px;
+  height: 2.5rem;
+  background-color: rgb(154, 156, 156);
+  border: none;
+  border-radius: 5%;
+  box-shadow: 1px 1px 2px  lightgrey;
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  text-align: center;
+}
+
+#day_btn{
+  position:absolute;
+  right: 4rem;
+  bottom: 1.6rem;
+  width: 130px;
+  height: 2.5rem;
+  background-color: lightseagreen;
+  border: none;
+  border-radius: 5%;
+  box-shadow: 1px 1px 2px  lightgrey;
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  text-align: center;
+}
+
+#day_btn_rwd{display: none;}
+
+/* 小月曆 */
+.cal_title{
+  text-align: center;
+  margin-bottom: 0.6rem;
+  }
+  
+  .cal_title h5{
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #666565;
+  }
+  
+.calender_container{
+  display: flex;
+  position: relative;
+}
+
+.finish::after{
+  display: block;
+  content: "";
+  /* width: 80%;
+  height: 90%; */
+  background-color:rgba(56, 53, 53, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.calender_container .prev{
+  width: 7.5%;
+  height: 30px;
+  margin: 6rem 0.8rem 0 0.5rem;
+  cursor: pointer;
+  border-radius: 20%;
+  position: relative;
+}
+
+.calender_container .prev_notsee{
+  opacity: 0; 
+  cursor: default;
+}
+
+.calender_container .next{
+  width: 7.5%;
+  height: 30px;
+  margin: 6rem -0.5rem 0 0.8rem;
+  cursor: pointer;
+  vertical-align: middle;
+  border-radius: 20%;
+}
+
+.calender_container .next_notsee{
+  opacity: 0; 
+  cursor: default;
+}
+
+.calender_container .next:hover,
+.calender_container .prev:hover{
+  background-color: rgb(219, 213, 213);
+}
+.calender_container h5{
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: rgb(107, 107, 107);
+  margin-top: -0.8rem;
+}
+  .calender{
+  width: 85%;
+  margin: 0 auto;
+  border: 1.2px solid rgb(85, 83, 83);
+  background-color: white;
+  position: relative;
+  }
+  
+  .calender ul{
+  display: flex;
+  flex-flow: row wrap;
+  }
+  
+  .calender .w-list{
+  text-align: center;
+  background-color: #72a4b6;
+  color: white;
+  text-shadow: 1px 1px 1px gray;
+  }
+  
+  .calender li{
+  width: var(--clist-width);
+  border-bottom: 1px solid lightgray;
+  box-shadow: 0 1.5px 1px #748388;
+  
+  }
+  
+  .calender .day-list li{
+  height: 40px;
+  text-align: left;
+  padding: 0.3rem 0 0 0.5rem;
+  cursor: pointer;
+  position: relative;
+  }
+  
+  .calender .day-list li:hover{
+  background-image: url("../image/site/check_hover.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  color: #8f8181;
+  
+  }
+  
+  .calender .day-list .checked,
+  .calender .day-list .checked:hover{
+  background-image: url("../image/site/check_true.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  color: black;
+  cursor: default;
+  }
+  
+  .calender .day-list .unable,
+  .calender .day-list .unable:hover{
+  color: lightgray;
+  background-image: none;
+  cursor: default;
+  }
+  
+   .calender .day-list .occupied,
+  .calender .day-list .occupied:hover{
+   background-image: none;
+ cursor: default;
+/*  background-image: url("../image/site/reserved (3).png"); */
+/*   background-repeat: no-repeat; */
+/*    background-position: center; */
+/*    background-size: 50%; */
+/*  color: transparent; */
+ color: pink;
+  }
+
+  /* .calender .day-list .finish_check,
+  .calender .day-list .finish_check:hover{
+  background-image: none;
+  cursor: default;
+  background-color: lightgrey;
+
+  } */
+
+
+  /* .calender .day-list .finish_check::after{
+    display: block;
+    width: 100%;
+    height: 10px;
+    content: "";
+    background-color: #79D19A;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    border-top: 3px solid #6AA67F;
+    border-bottom: 3px solid #6AA67F;
+  } */
+
+  #clear_btn{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    margin-left: -40px;
+    margin-bottom: -20px;
+    background-color: rgb(166, 167, 168);
+    color: white;
+    border: none;
+    padding: 3px;
+    border-radius: 4%;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px rgb(80, 80, 80);
+    width: 80px;
+  }
+
+  #clear_btn:hover{
+    box-shadow: 2px 2px 2px rgb(189, 189, 189);
+  }
+
+  .calender_btm{
+  width: 80%;
+  margin: 0 auto;
+  text-align: right;
+  }
+  
+  .calender_btm h4{
+    display: inline-block;
+    margin-right: 6.5rem;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 800;
+    color:rgb(163, 82, 82)
+  }
+  
+  .calender_btm img{
+   margin-top: 10px;
+   width: 30px;
+  }
+  
+  .div_checked{
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 5px;
+  background-color: pink;
+  border: 1px solid #bfbfbf;
+  box-shadow: 1px 1px 1px #c0c0c0;
+  }
+  
+  .text_checked{
+  display: inline-block;
+  vertical-align: center;
+  font-size: 0.8rem;  
+  color: #464545;
+  font-weight: 500;
+  
+  }
+  
+  .calender_btm span{
+    font-size: 1.3rem;
+    font-weight: 300;
+    vertical-align: middle;
+    text-decoration: underline;
+    text-decoration-line: 1px;
+    text-underline-offset: 2px;
+  }
+
+
+/*************************** Step3 租費試算*******************************/
+
+.cal_row{
+  display: flex;
+  justify-content: center;
+}
+
+.-none{
+  display: none;
+}
+
+.cal_ask{
+  background-color: white;
+  width: 30.3%;
+  border-radius: 5px;
+  padding: 1rem 4rem;
+  box-shadow: 2px 2px 10px rgb(78, 134, 101);
+}
+
+.cal_div{
+  background-color: white;
+  width: 47%;
+  margin-right: 2.1rem;  
+  padding: 1rem 6rem 1rem 4rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgb(78, 134, 101);
+  z-index: 2;
+  position: relative;
+}
+
+.step3{
+  margin: 1.6rem 0 2rem 0;
+  display: inline-block;
+  color: #59a169;
+  font-size: 1.68rem;
+}
+
+.cal_div h6{
+display: inline;
+line-height: 2rem;
+color: #707070;
+}
+
+.cal_div #total{
+  color: rgb(182, 28, 28);
+}
+.cal_div #rnt_total, #money{
+color: rgb(182, 28, 28);
+font-size: 1.2rem;
+}
+
+.cal_div span{
+float: right;
+color: #707070;
+font-weight: 800;
+}
+
+.cal_ask h4{
+  text-align: center;
+  color: #707070;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #000000;
+}
+
+.cal_ask ul{
+  margin-bottom: 1rem;
+  /* border-bottom: 1px solid #000000; */
+}
+
+.cal_ask li{
+  color: #34854c;
+  font-weight: 800;
+  /* margin-left: 4rem; */
+  margin-bottom: 0.3rem;
+  border-bottom: 1px solid #e2dede;
+}
+
+.cal_ask li::after{
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: lightgray;
+  display: block;
+}
+
+.cal_ask h5{
+  margin-bottom: 0.4rem;
+  color: #000000;
+}
+
+.cal_ask h6{
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: #707070;
+}
+
+.cal_ask #apply_btn{
+  float: right;
+  margin-bottom: 1rem;
+  background-color: lightseagreen;
+  color: white;
+  border: none;
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 5%;
+  box-shadow: 1px 1px 2px  lightgrey;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 800;
+}
+/*calender end*/
+
+/****************************************************************/
+
+@media (min-width: 992px) and (max-width: 1200px){
+  /* .step1{
+    color: red;
+  } */
+
+  .-none{
+    display: none;
+  }
+
+  .cal_div{
+    margin-right: 1.6rem;
+  }
+
+  .alert_div{
+    position:absolute;
+    right: 70px;
+    top: 260px;
+    width: 100px;
+  }
+  
+  .latest-news h1 {
+  font-size: 2rem;
+  left: calc(50% + 140px);
+  top: 20px;
+ }
+ .latest-news h3 {
+  left: calc(50% + 160px);
+  top: 65px;
+ }
+}
+
+
+
+/****************************************************************/
+
+
+@media (max-width: 991.98px){
+
+  .latest-news h1 {
+  font-size: 2rem;
+  left: 48%;
+ }
+ .latest-news h3 {
+  font-size: 1.5rem;
+  left: calc(50% + 30px);
+  top: 50px;
+ }
+ .latest-news img {
+  width: 150px;
+  left: 30%;
+  top: -40px;
+ }
+
+  .step_rwd{
+    color: rgb(238, 238, 238);
+    text-shadow: 1px 1px 2px rgb(94, 94, 94);
+    margin: 0;
+    text-align: left;
+    font-size: 1.4rem;
+    padding-left: 1rem;
+  }
+
+  .element_site{
+    flex-direction: column;
+    height: auto;
+    background: linear-gradient(transparent 0%, transparent 100%);
+    box-shadow: none;
+    width: 60%;
+  }
+
+  .step_div{
+    display: flex;
+    margin-bottom: 1rem;
+
+  }
+  
+  /* step1 */
+  #site_select_rwd{
+    display: inline-block;
+    position: static;
+    background-color: rgba(238, 238, 238, 0.6);
+    border-radius: 3px;
+    color: rgb(71, 71, 71);
+    margin-left: 1rem;
+    height: 1.8rem;
+  }
+
+
+  .li_img{
+    width: 100%;
+  }
+
+  .li_img img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .item{
+    position: relative;
+    margin-top: -0.5rem;
+  }
+
+  .site_des{
+    width: 100%;
+  }
+
+  .img_cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    background-color: rgb(12, 12, 12, 0.6);
+    opacity: 0;
+    transition: opacity .5s;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 6rem;
+  }
+
+  .item:hover .img_cover{
+    opacity: 1;
+  }
+
+  .img_cover ul>li{
+    color:rgb(223, 223, 223);
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.5rem;
+  }
+    .img_cover #li_title{
+    font-size: 23px;
+    color:#ff0;
+    /* text-shadow: 1px 1px 2px rgb(85, 85, 85); */
+    margin-bottom: 0.5rem;
+  }
+
+  .img_cover #li_title::after{
+    content: "";
+    width: 0%;
+    height: 1.5px;
+    background-color: #ff0;
+    display: block;
+    transition: width .5s .3s;
+  }
+
+  .item:hover #li_title::after{
+    width: 100%;
+  }
+
+
+  .site_des{
+    display: none;
+  }
+
+  #site_btn_rwd{
+    display: block;
+    background-color: rgb(233, 233, 233, 0.1);
+    border-radius: 12px 12px 12px 0;
+    box-shadow: none;
+    width: 4.5rem;
+    height: 2rem;
+    margin: 0 1rem 1rem 0;
+    padding: 0.1rem;
+    color: rgba(229, 243, 229, 0.8);
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  #site_btn_rwd:hover{
+    color:rgb(223, 223, 223);    
+    background-color: rgba(233, 233, 233, 0.3);
+  }
+
+  /* step2 */
+  .cal_bg{
+    flex-direction: column;
+    height: auto;
+    background: linear-gradient(transparent 0%, transparent 100%);
+    box-shadow: none;
+    width: 64%;
+  }
+
+
+  #year_select_rwd, #month_select_rwd{
+    background-color: rgba(238, 238, 238, 0.6);
+    border-radius: 3px;
+    color: rgb(71, 71, 71);
+    margin-left: 0.6rem;
+    height: 1.8rem;
+    width: 80px;
+  }
+
+  .cal_right{
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgb(134, 134, 134);
+    margin-top: -0.5rem;
+  }
+
+  #day_btn_rwd{
+    display: block;
+    background-color: rgb(221, 221, 221);
+    border: none;
+    border-radius: 12px 12px 12px 0;
+    box-shadow: none;
+    width: 4.5rem;
+    height: 2rem;
+    padding: 0.1rem;
+    color: rgba(88, 88, 88, 0.8);
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin: 1rem auto;
+  }
+
+  #day_btn_rwd:hover{
+    color:rgb(250, 250, 250);    
+    background-color: rgb(202, 202, 202);
+  }
+
+  
+  .cal_left{display: none;}
+  .cal.right{width: 100%;}
+
+  .calender_container{
+    background-color: transparent;
+  }
+
+  .alert_div{
+    position: static;
+    width: 100px;
+    margin-top: -20px;
+  }
+
+  /* step3 */
+  .step3{display: none;}
+ 
+  .cal_row{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .cal_div{
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  .step3_content{
+   background-color: whitesmoke; 
+   padding: 1.5rem;
+   border-radius: 5px;
+   box-shadow: 1px 1px 2px rgb(134, 134, 134);
+   margin-top: -2rem;
+  }
+
+  .cal_ask{
+    background-color: whitesmoke; 
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgb(134, 134, 134);
+    margin: 2rem auto;
+    width: 60%;
+  }
+
+  .-none{
+    display: none;
+  }
+
+  
+}
+
+/****************************************************************/
+
+@media (max-width: 767.98px){
+
+  .-none{
+    display: none;
+  }
+
+ .latest-news h1 {
+  font-size: 2rem;
+  left: 48%;
+ }
+ .latest-news h3 {
+  font-size: 1.5rem;
+  left: calc(50% + 30px);
+  top: 50px;
+ }
+ .latest-news img {
+  width: 150px;
+  left: 30%;
+  top: -40px;
+ }
+  /* .step_rwd{
+    color: yellow;
+  } */
+
+  .element_site{
+    width: 85%;
+  }
+
+  .cal_bg{
+    width: 90%;
+  }
+
+  .calender .day-list li{
+    height: 50px;
+  }
+
+  .cal_div, .cal_ask{
+    width: 85%;
+  }
+
+  .img_cover{
+    padding: 2rem;
+  }
+
+  .img_cover ul>li{
+    color:rgb(223, 223, 223);
+    text-align: left;
+    font-size: 18px;
+    line-height: 2rem;
+  }
+
+  .img_cover #li_title{
+    font-size: 24px;
+  }
+
+  #site_btn_rwd{
+    margin: 0 1rem 0.2rem 0;
+  }
+}
+
+/****************************************************************/
+
+@media (max-width: 575.98px){
+
+  .-none{
+    display: none;
+  }
+
+  .latest-news h3{
+    font-size: 1.3rem;
+    top: 120px;
+    left: 30%;
+}
+ .latest-news h1 {
+  font-size: 2rem;
+  left: 20%;
+  top: 80px;
+ }
+ 
+ .latest-news img {
+  width: 150px;
+  left: 30%;
+  top: -40px;
+ }
+
+  .step_rwd{
+    /* color: pink; */
+    font-size: 19px;
+  }
+  .calender li{
+    font-size: 14px;
+  }
+  .calender .day-list li{
+    height: 48px;
+    font-size: 0.9rem;
+  }
+
+  .calender_container .prev{
+    position: absolute;
+    top: -8.8rem;
+    left: 1.4rem;
+  }
+
+  .calender_container .next{
+    position: absolute;
+    top: -8.8rem;
+    right: 2.5rem;
+  }
+
+  .calender_container h5{
+    font-size: 26px;
+    margin-top: -.2rem;
+  }
+
+  .img_cover ul>li{
+    font-size: 16px;
+  }
+
+  .img_cover #li_title{
+    font-size: 20px;
+  }
+}

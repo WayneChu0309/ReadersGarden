@@ -1,0 +1,186 @@
+/* mylist start */
+section.mylist {
+	margin-bottom: 40px;
+	align-items: center;
+	
+}
+
+/* hr{ */
+/* 		margin-top: 50px; */
+/* } */
+
+
+
+.content_row1 {
+	margin-left:350px;
+	display:flex;
+	margin-top:130px;
+}
+
+/* .content_left { */
+/* 	/* 	width: 100px; */ 
+/* 	padding-left: 90px; */
+/* } */
+
+
+/* .content_label { */
+/* 	width: 180px; */
+/* 	background-color: white; */
+/* 	margin: 0 0 2rem 2rem; */
+/* 	padding: 1rem 0; */
+/* 	text-align: center; */
+/* 	border-radius: 10px; */
+/* 	display: block; */
+/* 	box-shadow: 1px 1px 3px rgb(143, 143, 143); */
+/* 	color: lightseagreen; */
+/* 	font-weight: 800; */
+/* } */
+
+/* .content_label:hover { */
+/* 	color: #707070; */
+/* 	font-weight: 800; */
+/* } */
+
+.container_el {
+<<<<<<< HEAD
+=======
+	
+>>>>>>> Wayne
+	width: 900px;
+	background-color: rgb(255, 255, 255, 0.6);
+	padding: 2.5rem;
+	border-radius: 20px;
+}
+
+.info_zone {
+	background-color: whitesmoke;
+	border-radius: 20px;
+	padding: 2rem;
+	margin: 0 auto;
+}
+
+.info_zone h5 {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	color: #707070;
+}
+
+table {
+	/* 	width: 70%; */
+	background-color: white;
+	margin-top: 50px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+}
+
+th:first-child {
+	border-top-left-radius: 10px;
+}
+
+th:last-child {
+	border-top-right-radius: 10px;
+}
+
+th {
+	background-color: lightgrey;
+}
+
+th, td {
+	/*   	font-size: 1rem; */
+	border: 1px solid transparent;
+	padding: 5px;
+	text-align: center;
+}
+
+/* section.mylist .activity { */
+/* 	width: 70%; */
+/* 	padding: 0 5rem; */
+/* 	height: max-content; */
+/* 	padding: 24px 60px; */
+/* 	margin-top: 24px; */
+/* 	background-color: rgb(255, 255, 255, 0.6); */
+/* 	border-radius: 20px; */
+/* } */
+
+/* section.mylist .activity h1 { */
+/* 	font-weight: var(- -heavy-font-weight); */
+/* 	margin-top: 10px; */
+/* 	font-size: 18px; */
+/* 	letter-spacing: 0.2em; */
+/* 	text-align: center; */
+/* } */
+
+/* section.mylist .content { */
+/* 	display: flex; */
+/* 	flex-direction: column; */
+/* 	align-items: center; */
+/* } */
+
+/* section.mylist .content table { */
+/* 	width: 80%; */
+/* 	margin: 40px 0 60px 0; */
+/* } */
+
+/* section.mylist td { */
+/* 	padding: 8px 24px; */
+/* 	letter-spacing: 0.2em; */
+/* 	vertical-align: top; */
+/* } */
+
+/* section.mylist td:first-of-type { */
+/* 	white-space: nowrap; */
+/* } */
+
+/* section.mylist td:last-of-type { */
+/* 	background-color: var(- -light-color); */
+/* } */
+
+/* section.mylist tr:first-of-type td { */
+/* 	border-radius: 20px 20px 0 0; */
+/* 	padding-top: 24px; */
+/* } */
+
+/* section.mylist tr:last-of-type td { */
+/* 	border-radius: 0 0 20px 20px; */
+/* 	padding-bottom: 24px; */
+/* } */
+
+/* section.mylist .btns, section.create .btns { */
+/* 	display: flex; */
+/* 	align-items: center; */
+/* } */
+
+section.mylist .btn-changed {
+	width: 100px;
+	margin-right: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(- -light-color);
+}
+
+/* section.mylist .btn-filled { */
+/* 	width: 200px; */
+/* 	margin-right: 16px; */
+/* 	display: flex; */
+/* 	justify-content: center; */
+/* 	align-items: center; */
+/* 	color: var(- -light-color); */
+/* } */
+
+/* section.mylist .btn-filled:first-of-type .btn-changed:first-of-type { */
+/* 	background-color: var(- -subtext-color); */
+/* } */
+
+/* section.mylist .btn-filled:last-of-type, .btn-changed:last-of-type { */
+/* 	border: none; */
+/* 	/* 	margin-left: 16px; */ */
+/* 	margin-right: 16PX; */
+/* 	background-color: var(- -main-color); */
+/* } */
+
+/* section.mylist .btn-filled:hover .btn-changed:hover { */
+/* 	background-color: var(- -selected-color); */
+/* } */
+
+/* mylist end */

@@ -1,0 +1,25 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='${pageContext.request.contextPath}/member/css/membercenter.css'>
+</head>
+<body>
+		<div class="content_row">
+		    <div class="content_left">
+		      <div><a href="#" class="content_label">會員資料</a></div>
+		      <div><a href="${pageContext.request.contextPath}/borrow/BorrowMemberServlet.do" class="content_label">借閱紀錄</a></div>
+		      <div><a href="${pageContext.request.contextPath}/marks/MarksServlet" class="content_label">收藏紀錄</a></div>
+		      <div><a href="${pageContext.request.contextPath}/eventlist/EventlistServlet?action=mylist" class="content_label">我的揪團</a></div>
+		      <div><a href="${pageContext.request.contextPath}/eventlist/EventlistServlet?action=myjoin" class="content_label">已參加揪團</a></div>
+		      <div><a href="${pageContext.request.contextPath}/order/memberorder?action=get_all" class="content_label">訂單紀錄</a></div>
+		    </div>
+	    </div>
+
+
+</body>
+</html>

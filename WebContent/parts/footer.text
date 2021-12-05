@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel='stylesheet' href='${pageContext.request.contextPath}/parts/css/footer.css'>
+  <link rel='stylesheet' href='${pageContext.request.contextPath}/parts/css/footer_media.css'>
+</head>
+
+<body>
+	<footer>
+	    <div class="container">
+	      <div class="row">
+	        <ul>
+	          <li><img src="${pageContext.request.contextPath}/parts/icon/loc.svg" alt="">台北市中山區南京東路三段219號5樓</li>
+	          <li><img src="${pageContext.request.contextPath}/parts/icon/phone.svg" alt="">02 2712 0589</li>
+	          <li><img src="${pageContext.request.contextPath}/parts/icon/email.svg" alt="">TFA103@gmail.com</li>
+	        </ul>
+	      </div>
+	    </div>
+	</footer>
+  <script src='${pageContext.request.contextPath}/parts/js/footer.js'></script>
+</body>
+</html>

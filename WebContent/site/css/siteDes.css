@@ -1,0 +1,410 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap')
+	;
+
+body {
+	background-image: url("../image/bg.png");
+	background-size: cover;
+	background-position: center center;
+}
+
+/* latest-news start */
+.latest-news {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+}
+
+.latest-news .container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.latest-news img {
+	position: absolute;
+	width: 200px;
+	top: -60px;
+	left: 50%;
+}
+
+.latest-news h1 {
+	position: absolute;
+	font-size: 48px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	top: 10px;
+	left: calc(50% + 170px);
+}
+
+.latest-news h3 {
+	position: absolute;
+	font-size: 25px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	top: 65px;
+	left: calc(50% + 280px);
+}
+
+/* latest-news end */
+.s_row {
+	display: flex;
+}
+
+.s_row .side {
+	background-color: #f5f5f5;
+	flex: 18%;
+	height: 15rem;
+	box-shadow: 1px 1px 1px lightgray;
+	border-radius: 5px;
+	padding: 1.2rem;
+	margin-left: 1rem;
+	margin-top: 8rem;
+	margin-bottom: 0.5rem;
+	position: sticky;
+	top: 6.8rem;
+	line-height: 1;
+}
+
+/* 點選進階篩選 變大框格*/
+.s_row .side_large {
+	height: 31rem;
+}
+
+.s_row .side ul>li {
+	display: inline-block;
+	margin-bottom: 0.5rem;
+	margin-right: 0.2rem;
+	border: 1px dashed rgb(165, 165, 165);
+	padding: 0.2rem;
+	border-radius: 5%;
+	font-size: 14px;
+}
+
+.s_row .side ul>li a {
+	display: inline-block;
+	color: black;
+}
+
+.s_row .side ul>li:hover {
+	background-color: #dfe2e1;
+	box-shadow: 1px 1px 1px lightgray;
+	cursor: pointer;
+}
+
+.s_row .side h3 {
+	font-size: 1rem;
+}
+
+.s_row .s_tag {
+	border-bottom: 1px solid black;
+}
+
+.s_row .side h4 {
+	color: darkgray;
+	margin-top: 1.2rem;
+	margin-bottom: 0.3rem;
+	font-size: 0.8rem;
+}
+
+.s_row .side>p {
+	display: inline;
+	padding-left: 0.2rem;
+	font-size: 0.8rem;
+}
+
+.s_row .side #rent_fee, #capacity, #area {
+	display: inline;
+}
+
+.s_row #choose_btn {
+	color: #0071c2;
+	border: none;
+	float: right;
+	cursor: pointer;
+	background-color: #f5f5f5;
+	margin-top: 1rem;
+}
+
+.s_row #choose_btn:hover {
+	background-color: rgb(221, 240, 253, 0.5);
+}
+
+.s_row #select_btn {
+	float: left;
+	width: 6rem;
+	height: 2rem;
+	background-color: lightseagreen;
+	border: none;
+	border-radius: 5%;
+	box-shadow: 1px 1px 2px lightgrey;
+	color: white;
+	font-size: 1rem;
+	cursor: pointer;
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.-none {
+	display: none;
+}
+
+.choose_title {
+	display: flex;
+	box-sizing: border-box;
+	border-bottom: 1px solid black;
+	justify-content: space-between;
+}
+
+.choose_title h3 {
+	display: inline;
+	border-bottom: none;
+}
+
+.choose_title h4 {
+	margin-top: 1.3rem;
+	margin-bottom: 0;
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+.usage_option {
+	height: 1.3rem;
+	border: 1px solid lightgray;
+	font-size: 0.5rem;
+	margin-left: 0.2rem;
+}
+
+.usage_option option {
+	font-size: 0.5rem;
+}
+
+.choose_div h3 {
+	margin-top: 1.2rem;
+}
+
+.choose_div h4 {
+	display: inline-block;
+}
+
+.choose_div input[type="range"] {
+	/* -webkit-appearance: none; */
+	height: 7px;
+}
+
+.range_value, .range_el {
+	display: inline;
+	margin-left: 0.3rem;
+	font-size: 10px;
+}
+
+.content {
+	flex: 82%;
+	margin: 0;
+	margin-top: 8rem;
+	text-align: center;
+	overflow: hidden;
+	padding-left: 2rem;
+	margin-bottom: 1.2rem;
+}
+
+.content .s_element {
+	padding: 0.8rem;
+	background-color: rgba(0, 50, 50, 0.2);
+	padding-bottom: 0.5rem;
+	box-shadow: 1px 1px 5px lightgray;
+	border-radius: 5px;
+	text-align: center;
+	float: left;
+	width: 30%;
+	margin-bottom: 1.5rem;
+	margin-right: 1.5rem;
+	height: 490px;
+}
+
+.s_element h5 {
+	font-weight: 500;
+	font-size: 1.3rem;
+	margin-bottom: 0.4rem;
+	color: rgb(27, 27, 27);
+	text-shadow: 1px 1px 4px rgb(189, 189, 189);
+}
+
+.site_des {
+	list-style: circle;
+	text-align: left;
+	padding: 0 2rem;
+	margin-bottom: 1rem;
+}
+
+.btn_div {
+	text-align: center;
+}
+
+.query_btn {
+	width: 10rem;
+	height: 2rem;
+	background-color: lightseagreen;
+	border: none;
+	border-radius: 5%;
+	box-shadow: 1px 1px 2px lightgrey;
+	color: white;
+	font-size: 1rem;
+	cursor: pointer;
+	text-align: center;
+}
+
+.query_btn:active {
+	color: black;
+}
+
+.li_img {
+	width: 100%;
+}
+
+.li_img img {
+	max-width: 100%;
+}
+
+/* content RWD */
+@media ( max-width : 575.98px) {
+	/* .s_element h5{
+    color: yellow;
+  } */
+	.s_row {
+		flex-direction: column;
+	}
+	.s_row .side {
+		position: static;
+		width: 80%;
+		margin: 7rem auto 0 auto;
+	}
+	.content {
+		margin-top: 3rem;
+	}
+	.content .s_element {
+		height: 520px;
+		width: 88%;
+		margin: 1rem auto;
+	}
+	.latest-news h1 {
+		font-size: 2rem;
+		left: 20%;
+		top: 80px;
+	}
+	.latest-news h3 {
+		font-size: 1.5rem;
+		left: 33%;
+		top: 120px;
+	}
+	.latest-news img {
+		width: 150px;
+		left: 30%;
+		top: -40px;
+	}
+}
+
+@media ( min-width : 576px) and (max-width: 767.98px) {
+	.s_element h5 {
+/* 		color: red; */
+	}
+	.s_row {
+		flex-direction: column;
+	}
+	.s_row .side {
+		position: static;
+		margin: 7rem auto 0 auto;
+		width: 85%;
+	}
+	.content {
+		margin-top: 3rem;
+	}
+	.content .s_element {
+		height: 470px;
+		width: 45%;
+	}
+	.latest-news h1 {
+		font-size: 2rem;
+		left: 48%;
+	}
+	.latest-news h3 {
+		font-size: 1.5rem;
+		left: calc(50% + 30px);
+		top: 50px;
+	}
+	.latest-news img {
+		width: 150px;
+		left: 30%;
+		top: -40px;
+	}
+}
+
+@media ( min-width : 768px) and (max-width: 991.98px) {
+	.s_element h5 {
+/* 		color: blue; */
+	}
+	.content .s_element {
+		height: 470px;
+		width: 45%;
+	}
+	.latest-news h1 {
+		font-size: 2rem;
+		left: calc(50% + 120px);
+		top: 20px;
+	}
+	.latest-news h3 {
+		font-size: 1.4rem;
+		left: calc(50% + 180px);
+		top: 60px;
+	}
+	.latest-news img {
+		width: 150px;
+		top: -40px;
+	}
+	.s_row .side {
+		height: 280px;
+		position: static;
+	}
+	.s_row .side_large {
+		height: 550px;
+	}
+	.s_row #select_btn {
+		font-size: 14px;
+		width: 5rem;
+		height: 1.6rem;
+	}
+}
+
+@media ( min-width : 992px) and (max-width: 1200px) {
+	.latest-news h1 {
+		font-size: 2rem;
+		left: calc(50% + 140px);
+		top: 20px;
+	}
+	.latest-news h3 {
+		left: calc(50% + 200px);
+		top: 65px;
+	}
+	.s_element h5 {
+/* 		color: green; */
+	}
+	.content .s_element {
+		height: 470px;
+	}
+	.s_row .side {
+		position: static;
+		height: 250px;
+	}
+	.s_row .side_large {
+		height: 510px;
+	}
+	.s_row #select_btn {
+		font-size: 14px;
+		width: 5rem;
+		height: 1.6rem;
+	}
+}
+
+/* content RWD */

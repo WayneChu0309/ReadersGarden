@@ -1,0 +1,88 @@
+body{
+    background-image: url("../image/bg.png");
+    background-size: cover;
+    background-position: center center; 
+}
+
+
+section#manager_functions{
+    margin-top: 120px;
+    height: 70px;
+}
+
+
+section#manager_functions .function_container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: rgba(255,255,255,.8);
+}
+
+
+
+section#manager_functions .function_container ul.indoor{
+    display: inline-flex;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+}
+section#manager_functions .function_container ul.indoor li{
+    position: relative;
+    margin-bottom: 10px;
+    width: 150px; /* rwd */
+    text-align: center;
+    z-index: 5;
+}
+
+section#manager_functions .function_container ul.indoor li:hover > a{
+    color: var(--focus-color);
+    border-color: var(--focus-color);
+    transform: scale(1.1);
+}
+
+section#manager_functions .function_container ul.indoor.check li:hover > ul{
+    display: block;
+}
+
+section#manager_functions .function_container ul a{
+    display: block;
+    color: var(--main-color);
+    font-size: 1.2rem; /* rwd */
+    letter-spacing: 2px;
+    margin:0 10px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid var(--main-color);
+    transition: .5s;
+}
+
+
+section#manager_functions .function_container ul.indoor > li:nth-child(1) > a::before,
+section#manager_functions .function_container ul.indoor > li:nth-child(2) > a::before{
+    content: "/";
+    position: absolute;
+    height: 100%;
+    right: -17px;
+    top: 0;
+    cursor:context-menu;
+    color:black !important;
+}
+
+/* 內層 li */
+section#manager_functions .function_container ul.indoor li ul{
+    position: absolute;
+    top: 31px;
+    transition: .5s;
+    display: none;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+}
+
+section#manager_functions .function_container ul.indoor ul ul{
+    position: absolute;
+    left: 100%;
+    top: 5px;
+}
+
+

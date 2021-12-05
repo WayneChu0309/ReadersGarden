@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap');
+
+body{
+    background-image: url("../image/bg.png");
+    background-size: cover;
+    background-position: center center;
+    overflow-y: auto;
+}
+
+.vendor_info{
+    margin-top: 120px;
+}
+
+.container_el{
+  background-color: whitesmoke;
+  padding: 2.5rem;
+  border-radius: 5px;
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  box-shadow: 1px 1px 3px lightgray;
+
+}
+
+.container_el h3{
+    font-size: 1.8rem;
+    color: rgb(126, 125, 125);
+    text-align: center;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.container_el h3::before{
+    content: "";
+    display: block;
+    height: 1.5px;
+    background-color: rgb(197, 197, 197);
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    left: 160px;
+}
+
+.container_el h3::after{
+    content: "";
+    display: block;
+    height: 1.5px;
+    background-color: rgb(197, 197, 197);
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    right: 160px;
+}
+
+.info_zone{
+  background-color: white;
+  border: 1.5px solid rgb(230, 231, 231);
+  border-radius: 3px;
+  padding: 3rem;
+  margin: 0 auto;
+}
+
+.info_zone h5{
+  display: inline-block;
+  font-size: 20px;
+  color: #707070;
+  margin-bottom: 1rem;
+}
+
+.info_zone h6{
+  display: inline-block;
+  color:rgb(206, 51, 51);
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+
+}
+
+.info_zone font{
+	color:rgb(206, 51, 51);
+	size: 12px;
+	font-weight: 500;
+}
+
+.password_alert{
+  font-size: 10px;
+  color: rgb(182, 37, 37);
+}
+
+.info_zone label{
+  font-size: 14px;
+}
+
+.info_zone .info_label{
+  margin-bottom: 1.2rem;
+  margin-right: 0.2rem;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.info_zone #vcompany,
+.info_zone #vtaxid{
+  margin-right: 1.5rem;
+  font-size: 14px;
+}
+
+
+.info_zone input[type="text"],
+.info_zone input[type="password"]{
+    padding: 0rem 0.3rem;
+    width: 280px;
+    margin-left: 2rem;
+    margin-bottom: 1.2rem;
+    font-size: 14px;
+}
+
+.info_zone .error_msgs{
+	font-size: 10px;
+	margin-left: 6.2rem;
+}
+
+/* 地址欄 */
+#twzipcode{
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+.city{
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 15px;
+}
+
+.town{
+  display: inline-block;
+  font-size: 15px;
+}
+
+#detail_addr_input{
+	display: block;
+	margin-left: 6.2rem;
+	margin-top: 1.2rem;
+}
+
+.container_el .btn_div{
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+.container_el .btn_div_password{
+  width: 160px;
+  margin: 0 auto;
+}
+
+.container_el input[type="submit"]{
+  width: 160px;
+	height: 40px;
+	display: inline-block;
+  color: white;
+  font-weight: 800;
+	background-color: rgb(125, 189, 175);
+	border: none;
+  border-radius: 3px;
+	cursor: pointer;    
+	margin: 1rem auto;
+  text-align: center;
+  box-shadow: 1px 1px 2px lightgray;
+
+}
+.container_el input[type="reset"]{
+	width: 160px;
+	height: 40px;
+    font-weight: 800;
+	display: inline-block;
+    color: rgb(125, 189, 175);
+	background-color: white;
+	border: 1.8px solid rgb(125, 189, 175);
+     border-radius: 3px;
+	cursor: pointer;    
+	margin: 1rem 1rem 0 auto;
+    text-align: center;
+    box-shadow: 1px 1px 2px lightgray;
+}
+
+/* .vendor_info input[type="submit"]:hover{
+    background-color: rgb(238, 238, 238);
+} */

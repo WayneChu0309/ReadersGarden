@@ -1,0 +1,16 @@
+@media screen and (max-width:991.98px){
+    footer .container .row{
+        height: 150px;
+        line-height: 50px;
+    }
+
+    footer .container .row ul{
+        display:block;
+    }
+
+    footer .container .row ul li{
+        text-align: center;
+    }
+}
+
+

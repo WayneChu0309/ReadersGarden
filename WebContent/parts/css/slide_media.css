@@ -1,0 +1,245 @@
+
+
+@media screen and (min-width:1200px) and (max-width: 1399.98px) {
+    :root{
+        font-size: 14px;
+        --slide:-375px;
+    }
+
+    .slide .container{
+        width: 1120px;
+        height: 375px;
+    }
+
+    .slide .container .row .row-items{
+        width: 370px;
+        height: 345px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+	.slide .container input[type="radio"]:nth-of-type(1):checked ~ .controls label:nth-of-type(1),
+	.slide .container input[type="radio"]:nth-of-type(1):checked ~ .controls label:nth-of-type(2),
+	.slide .container input[type="radio"]:nth-of-type(1):checked ~ .controls label:nth-of-type(3){
+	    background-color: var(--buttom-color);
+	    box-shadow: 0 0 15px var(--buttom-color);
+	}
+	
+	.slide .container input[type="radio"]:nth-of-type(2):checked ~ .controls label:nth-of-type(2),
+	.slide .container input[type="radio"]:nth-of-type(2):checked ~ .controls label:nth-of-type(3),
+	.slide .container input[type="radio"]:nth-of-type(2):checked ~ .controls label:nth-of-type(4) {
+	    background-color: var(--buttom-color);
+	    box-shadow: 0 0 15px var(--buttom-color);
+	}
+	
+	.slide .container input[type="radio"]:nth-of-type(3):checked ~ .controls label:nth-of-type(3),
+	.slide .container input[type="radio"]:nth-of-type(3):checked ~ .controls label:nth-of-type(4),
+	.slide .container input[type="radio"]:nth-of-type(3):checked ~ .controls label:nth-of-type(5) {
+	    background-color: var(--buttom-color);
+	    box-shadow: 0 0 15px var(--buttom-color);
+	}
+	
+	.slide .container input[type="radio"]:nth-of-type(4):checked ~ .controls label:nth-of-type(4),
+	.slide .container input[type="radio"]:nth-of-type(4):checked ~ .controls label:nth-of-type(5),
+	.slide .container input[type="radio"]:nth-of-type(4):checked ~ .controls label:nth-of-type(6) {
+	    background-color: var(--buttom-color);
+	    box-shadow: 0 0 15px var(--buttom-color);
+	}
+	
+	.slide .container input[type="radio"]:nth-of-type(5):checked ~ .controls label:nth-of-type(5),
+	.slide .container input[type="radio"]:nth-of-type(5):checked ~ .controls label:nth-of-type(6),
+	.slide .container input[type="radio"]:nth-of-type(5):checked ~ .controls label:nth-of-type(1){
+	    background-color: var(--buttom-color);
+	    box-shadow: 0 0 15px var(--buttom-color);
+	}
+	
+	.slide .container input[type="radio"]:nth-of-type(6):checked ~ .controls label:nth-of-type(6),
+	.slide .container input[type="radio"]:nth-of-type(6):checked ~ .controls label:nth-of-type(1),
+	.slide .container input[type="radio"]:nth-of-type(6):checked ~ .controls label:nth-of-type(2) {
+	    background-color: var(--buttom-color);
+	    box-shadow: 0 0 15px var(--buttom-color);
+	}
+}
+
+@media screen and (min-width:768px) and (max-width:1199.98px) {
+    .slide .container input[type="radio"]:nth-of-type(1):checked ~ .controls label:nth-of-type(1),
+    .slide .container input[type="radio"]:nth-of-type(1):checked ~ .controls label:nth-of-type(2){
+        background-color: var(--buttom-color);
+        box-shadow: 0 0 15px var(--buttom-color);
+    }
+
+    .slide .container input[type="radio"]:nth-of-type(2):checked ~ .controls label:nth-of-type(2),
+    .slide .container input[type="radio"]:nth-of-type(2):checked ~ .controls label:nth-of-type(3){
+        background-color: var(--buttom-color);
+        box-shadow: 0 0 15px var(--buttom-color);
+    }
+
+    .slide .container input[type="radio"]:nth-of-type(3):checked ~ .controls label:nth-of-type(3),
+    .slide .container input[type="radio"]:nth-of-type(3):checked ~ .controls label:nth-of-type(4){
+        background-color: var(--buttom-color);
+        box-shadow: 0 0 15px var(--buttom-color);
+    }
+
+    .slide .container input[type="radio"]:nth-of-type(4):checked ~ .controls label:nth-of-type(4),
+    .slide .container input[type="radio"]:nth-of-type(4):checked ~ .controls label:nth-of-type(5){
+        background-color: var(--buttom-color);
+        box-shadow: 0 0 15px var(--buttom-color);
+    }
+
+    .slide .container input[type="radio"]:nth-of-type(5):checked ~ .controls label:nth-of-type(5),
+    .slide .container input[type="radio"]:nth-of-type(5):checked ~ .controls label:nth-of-type(6){
+        background-color: var(--buttom-color);
+        box-shadow: 0 0 15px var(--buttom-color);
+    }
+
+    .slide .container input[type="radio"]:nth-of-type(6):checked ~ .controls label:nth-of-type(6),
+    .slide .container input[type="radio"]:nth-of-type(6):checked ~ .controls label:nth-of-type(1){
+        background-color: var(--buttom-color);
+        box-shadow: 0 0 15px var(--buttom-color);
+    }
+}
+
+@media screen and (min-width:992px) and (max-width: 1199.98px){
+    :root{
+        --slide:-450px;
+    }
+
+    .slide .container{
+        width: 900px;
+        height: 415px;
+    }
+
+    .slide .container .row{
+        width: 1345px;
+    }
+
+    .slide .container .row .row-items{
+        width: 445px;
+        height: 415px;
+        margin-right: 5px;
+    }
+
+    .slide .container .row:nth-of-type(3){
+        left: 1350px;
+    }
+    
+    .slide .container .row:nth-of-type(4){
+        left: 2700px;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width: 991.98px){
+    :root{
+        --slide:-340px;
+    }
+    .slide .container{
+        width: 680px;
+        height: 342px;
+    }
+
+    .slide .container .row{
+        width: 1015px;
+    }
+
+    .slide .container .row .row-items{
+        width: 335px;
+        height: 312px;
+    }
+
+    .slide .container .row:nth-of-type(3){
+        left: 1020px;
+    }
+    
+    .slide .container .row:nth-of-type(4){
+        left: 2040px;
+    }
+
+}
+
+
+@media screen and (max-width:767.98px) {
+    :root{
+        --slide:-435px;
+    }
+
+    .slide .container{
+        width: 435px;
+        height: 430px;
+    }
+
+    .slide .container .row{
+        width: 1300px;
+    }
+
+    .slide .container .row .row-items{
+        width: 430px;
+        height: 400px;
+    }
+
+    .slide .container .row:nth-of-type(3){
+        left:1305px;
+    }
+    
+    .slide .container .row:nth-of-type(4){
+        left:2710px;
+    }
+
+    .slide .container input[type="radio"]:nth-of-type(1):checked ~ .controls label:nth-of-type(1){
+        background-color: var(--buttom-color);
+        box-shadow: 0 0 15px var(--buttom-color);
+    }
+
+    .slide .container input[type="radio"]:nth-of-type(2):checked ~ .controls label:nth-of-type(2){
+        background-color: var(--buttom-color);
+        box-shadow: 0 0 15px var(--buttom-color);
+    }
+
+    .slide .container input[type="radio"]:nth-of-type(3):checked ~ .controls label:nth-of-type(3){
+        background-color: var(--buttom-color);
+        box-shadow: 0 0 15px var(--buttom-color);
+    }
+
+    .slide .container input[type="radio"]:nth-of-type(4):checked ~ .controls label:nth-of-type(4){
+        background-color: var(--buttom-color);
+        box-shadow: 0 0 15px var(--buttom-color);
+    }
+
+    .slide .container input[type="radio"]:nth-of-type(5):checked ~ .controls label:nth-of-type(5){
+        background-color: var(--buttom-color);
+        box-shadow: 0 0 15px var(--buttom-color);
+    }
+
+    .slide .container input[type="radio"]:nth-of-type(6):checked ~ .controls label:nth-of-type(6){
+        background-color: var(--buttom-color);
+        box-shadow: 0 0 15px var(--buttom-color);
+    }
+}
+
+@media screen and (max-width:575.98px) {
+    :root{
+        --slide:-344px;
+    }
+
+    .slide .container{
+        width: 345px;
+        height: 346px;
+    }
+
+    .slide .container .row{
+        width: 1030px;
+    }
+
+    .slide .container .row .row-items{
+        width: 340px;
+        height: 316px;
+    }
+
+    .slide .container .row:nth-of-type(3){
+        left:1035px;
+    }
+    
+    .slide .container .row:nth-of-type(4){
+        left:2070px;
+    }
+}

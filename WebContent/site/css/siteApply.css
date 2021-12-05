@@ -1,0 +1,1125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap');
+
+:root{
+    --clist-width:14.2857142857143%;
+}
+
+body{
+    background-image: url("../image/bg.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+/* latest-news start */
+
+.latest-news{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.latest-news .container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.latest-news img{
+    position: absolute;
+    width:200px;
+    top: -60px;
+    left:50%;
+}
+
+
+.latest-news h1{
+    position: absolute;
+    font-size: 48px;
+    font-weight:300;
+    letter-spacing: 2px;
+    top: 10px;
+    left:calc(50% + 170px);
+}
+
+.latest-news h3{
+    position: absolute;
+    font-size: 25px;
+    font-weight:300;
+    letter-spacing: 2px;
+    top: 65px;
+    left:calc(50% + 280px);
+    }
+
+/* latest-news end */
+
+.progress{
+    border-radius: 5px;
+    margin: 8rem auto 0 auto;
+    padding: 5px 0;
+    width: 88%;
+}
+
+.progress .progress_ol{
+    display: flex;
+
+}
+
+.progress .line{
+    height: .6px;
+    width: 36%;
+    background-color: rgb(145, 144, 144);
+    box-shadow: 1px 1px 4px lightgray;
+    margin: 11px 8px 0 8px;
+}
+
+.progress .progress_circle{
+    display: inline-block;
+    padding-left: 8px;
+    width: 25px;
+    border-radius: 100%;
+    background-color: rgb(145, 221, 145);
+    color: white;
+    text-shadow: 1px 1px 5px lightslategray;
+    box-shadow: 1px 1px 5px lightslategrey;
+}
+
+.progress .p1{
+    display: inline-block;
+    padding-left: 9.5px;
+    width: 25px;
+    border-radius: 100%;
+    background-color: rgb(145, 221, 145);
+    color: white;
+    text-shadow: 1px 1px 5px lightslategray;
+    box-shadow: 1px 1px 5px lightslategrey;
+}
+
+.progress .check_icon{
+    padding-left: 6px;
+}
+
+.progress #p3{
+    background-color: gray;
+}
+
+.progress .progress_text{
+    font-weight: 500;
+    color:rgb(68, 68, 68);
+    font-size: 14px;
+    text-shadow: 1px 1px 5px white;
+}
+
+.alert_zone{
+ position: absolute;
+ right: 75px;
+ bottom: -100px;
+ width: 230px;
+ height: 280px;
+/*     border-radius: 5px; */
+    padding: 1.5rem 1.2rem 2rem 1.2rem;
+    box-shadow: 1px 1px 4px gray;
+    background-color: white;
+    border: 1.2px solid lightgray;
+}
+
+.alert_zone img{
+ width: 15px;
+ height: 6px;
+ float: right;
+ margin-top: -8px;
+ margin-right: -5px;
+ cursor: pointer;
+ opacity: 0.5;
+}
+
+.act_row{
+    margin-top: 1.5rem;
+    display: flex;
+    padding: 0 5rem;
+    
+}
+
+.act_left{
+    width: 30%;
+    margin-right: 2.5rem;
+}
+
+.act_right{
+    width: 70%;
+    position: relative;
+}
+
+.left_side{
+    margin-bottom: 2rem;
+}
+
+.left_side h3{
+    margin-bottom: 0.8rem;
+    color: black;
+    font-size: 1rem;
+    font-weight: 800;   
+}
+
+.act_container{
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    padding: 1.5rem 1.6rem 2rem 1.6rem;
+    box-shadow: 1px 1px 4px gray;
+    background-color: white;
+}
+
+.act_div h3{
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 800;   
+}
+
+.act_div .act_el label{
+    font-size: 14px;
+}
+
+/* 場地選擇 choose_div 開始 */
+.choose_div label{
+    font-size: 14px;
+}
+
+.choose_div select{
+    margin-bottom: 0.8rem;
+    font-size: 14px;
+    border: 1px solid rgb(168, 168, 168);
+    border-radius: 2px;
+}
+
+.choose_div #search_btn{
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #0071c2;
+    width: 6.5rem;
+    height: 2rem;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0.2rem 0 0.5rem -0.6rem;
+}
+
+.choose_div #search_btn:hover{
+    background-color: rgb(221, 240, 253, 0.5);
+
+}
+
+/* 場地選擇 site_div 開始 */
+.site_div{
+/*     display: none; */
+}
+
+.site_div .time_choose{
+    display: flex;
+}
+
+.site_div .time_left{
+    position: relative;
+}
+
+.site_div .time_left::after{
+    display: block;
+    content: "";
+    background-color: rgb(218, 218, 218);
+    height: 70%;
+    width: 0.6px;
+    position: absolute;
+    top: 1.5rem;
+    right: -0.9rem;
+
+
+}
+.site_div .time_right{
+    padding-left: 1.3rem;
+}
+
+
+.site_div .time_choose h4{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+
+}
+
+.site_div .time_choose span{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#show_tstart, #show_tend{
+    color: #949494;
+    font-weight: 500;
+}
+
+.site_div hr{
+    border: none;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    margin-bottom: 0.8rem;
+}
+
+.site_div h4{
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 0.8rem;
+}
+
+.site_div span{
+    font-size: 14px;
+    font-weight: 800;
+    display: inline-block;
+    margin-bottom: 0.8rem;
+}
+
+.site_div img{
+    max-width: 50%;
+    margin-bottom: 0.2rem;
+}
+
+.site_div #change_btn{
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #0071c2;
+    width: 5rem;
+    height: 2rem;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 0 0.5rem -0.8rem;
+}
+
+
+.site_div #change_time_btn{
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #0071c2;
+    width: 9.2rem;
+    height: 2rem;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 0 0.5rem -0.6rem;
+}
+
+.site_div #change_btn:hover,
+.site_div #change_time_btn:hover{
+    background-color: rgb(221, 240, 253, 0.5);
+}
+
+.site_div #daycost,
+.site_div #day,
+.site_div #rnt_total{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+/* 小月曆 */
+
+.pop_bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000000;
+    opacity: 0.5;
+    z-index: 1000;
+    display: none;
+    }
+
+.cal_pop{
+    position: fixed;
+    width: 500px;
+    height: 440px;
+    left: 50%;
+    top: 50%;
+    margin-left: -240px;
+    margin-top: -230px;
+    z-index: 1002;
+    background-color: white;
+    border: 15px solid rgb(212, 212, 212, 0.5);
+    border-radius: 5px;
+    padding: 15px;
+    display: none;
+}
+
+.cal_pop img{
+    width: 20px;
+    float: right;
+    margin-top: -2.7rem;
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.select_date{
+    display: none;
+}
+
+
+.cal_pop h6{
+    text-align: center;
+    margin-bottom: 1.2rem;
+    color: #707070;
+}
+
+.cal_pop h6 span{
+    color: red;
+}
+
+.cal_title{
+    text-align: center;
+    margin-bottom: 0.6rem;
+}
+    
+.cal_title h5{
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666565;
+    margin-left: 0.3rem;
+}
+
+.calender_container{
+    display: flex;
+}
+
+.finish::after{
+    display: block;
+    content: "";
+    width: 80%;
+    height: 90%;
+    background-color:rgba(56, 53, 53, 0.2);
+    position: absolute;
+    top: 25px;
+    left: 53px;
+}
+
+.calender_container .prev{
+    width: 5%;
+    height: 30px;
+    margin: 6rem 0.8rem 0 0.5rem;
+    cursor: pointer;
+    vertical-align: middle;
+    border-radius: 20%;
+    padding-left: 0.2rem;
+}
+
+.calender_container .prev h5,
+.calender_container .next h5{
+    font-weight: 200;
+}
+
+.calender_container .prev_notsee{
+    opacity: 0; 
+    cursor: default;
+}
+
+.calender_container .next{
+    width: 5%;
+    height: 30px;
+    margin: 6rem 0rem 0 0.8rem;
+    cursor: pointer;
+    vertical-align: middle;
+    border-radius: 20%;
+    padding-left: 0.2rem;
+
+}
+
+.calender_container .next_notsee{
+    opacity: 0; 
+    cursor: default;
+}
+
+.calender_container .next:hover,
+.calender_container .prev:hover{
+    background-color: rgb(228, 227, 227);
+}
+.calender_container h5{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: rgb(107, 107, 107);
+    margin-top: -0.8rem;
+}
+
+.calender{
+    width: 80%;
+    margin: 0 auto;
+    border: 1.2px solid rgba(175, 175, 175, 0.8);
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px lightgray;
+    background-color: white;
+}
+
+.calender ul{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.calender .w-list{
+    text-align: center;
+    background-color: #ffffff;
+    color: #929292;
+    height: 30px;
+    padding: 0.3rem;
+
+}
+
+.calender .w-list li{
+    font-size: 14px;
+}
+
+.calender li{
+    width: var(--clist-width);
+    /* box-shadow: 0 1.5px 1px #748388; */
+
+}
+
+.calender .day-list li{
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+    padding: 0.5rem;
+    color: #707070;
+    border-radius: 5px;
+
+}
+
+.calender .day-list li:hover{
+    background-color: #fad56e;
+    color: white;
+}
+
+.calender .day-list .checked,
+.calender .day-list .checked:hover{
+    background-color: rgb(158, 209, 158);
+    color: white;
+}
+
+.calender .day-list .unable,
+.calender .day-list .unable:hover{
+    color: lightgray;
+    cursor: default;
+    background-color: white;
+}
+
+.calender .day-list .occupied,
+.calender .day-list .occupied:hover{
+    color: red;
+    cursor: default;
+    background-color: white;
+}
+
+
+.calender .day-list .select_period{
+    background-color: rgb(228, 228, 228);
+    color: #707070;
+    border-radius: 0px;
+    /* border-bottom: 1px solid lightgray; */
+}
+
+
+.calender_btm{
+    width: 80%;
+    margin: 0 auto;
+    text-align: right;
+}
+    
+.calender_btm h4{
+    display: inline-block;
+    margin-right: 6.5rem;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 800;
+    color:rgb(163, 82, 82)
+}
+
+
+.div_checked{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 5px;
+    background-color: red;
+    border: 1px solid lightgray;
+    box-shadow: 1px 1px 1px lightgray;
+}
+    
+.text_checked{
+display: inline-block;
+vertical-align: center;
+font-size: 0.8rem;  
+color: #707070;
+font-weight: 500;
+}
+    
+.calender_btm span{
+    font-size: 1.3rem;
+    font-weight: 300;
+    vertical-align: middle;
+    text-decoration: underline;
+    text-decoration-line: 1px;
+}
+
+#confirm_btn{
+    display: block;
+    margin: 0 auto;
+    background-color: lightseagreen;
+    border: 1px solid #a8a8a8;
+    color: white;
+    width: 80px;
+    border-radius: 3px;
+    padding: 0.1rem;
+    display: none;
+}
+
+#confirm_btn:hover{
+    box-shadow: 1px 1px 2px lightgray;
+}
+
+/* 場地選擇結束 */
+
+/* 活動資訊開始 */
+.act_el{
+    margin-bottom: 1.2rem;
+    
+}
+
+.act_el label{
+    vertical-align: top;
+    margin-right: 0.5rem;
+    font-weight: 500;
+    color: #000000;
+}
+
+.act_el input[type="text"],
+.act_el textarea,
+.act_el select{
+    padding: 0.2rem 0.3rem;
+    width: 60%;
+    font-size: 14px;
+    vertical-align: middle;
+    margin-top: -0.3rem;
+    border: 1px solid rgb(168, 168, 168);
+    border-radius: 2px;
+
+}
+
+.act_el textarea{
+ resize: none;
+}
+
+.act_el input[type="file"]{
+    padding: 0.2rem 0.3rem;
+    width: 60%;
+    font-size: 14px;
+    vertical-align: middle;
+    margin-top: -0.3rem;
+    border-radius: 2px;
+
+}
+
+.act_el input[type="date"]{
+    vertical-align: middle;
+    margin-top: -0.3rem;
+/*     width: 28%; */
+    font-size: 14px;
+    border: 1px solid rgb(168, 168, 168);
+    border-radius: 2px;
+}
+
+#act_start_date, #tk_start_date, #act_end_date, #tk_end_date{
+ width: 28%;
+}
+
+.act_el .alert{
+    margin-left: 4.2rem;
+    color: red;
+    font-size: 0.8rem;
+    display: none;
+}
+
+
+.act_el .preview{
+    width: 60%;
+    height: 200px;
+    border: 1px dashed rgb(168, 168, 168);
+    margin: 1rem 0 0 4.8rem;
+    text-align: center;
+}
+
+.act_el .preview h6{
+    font-size: 1rem;
+    color: gray;
+    margin-top: 5rem;
+}
+
+.act_el .preview img{
+ max-width: 100%;
+ height: 200px;
+}
+
+.act_right #next_btn{
+    text-align: center;
+    font-weight: 800;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    width: 13rem;
+    height: 3rem;
+    float: right;
+    background-color: lightseagreen;
+    border-radius: 5%;
+    box-shadow: 1px 1px 2px lightgrey;
+    cursor: pointer;
+    margin-top: 2rem;
+
+  }
+  
+  .errorMsgs{
+   margin-left: 70px;
+   margin-bottom: 5px;
+   font-size: 14px;
+   color: red;
+   font-weight: 500;
+  }
+  
+  .datestart{
+   display: inline-block;
+  }
+  
+  .dateend{
+   display: inline-block;
+   margin-left: 20px;
+  }
+  
+  /* 注意事項 */
+  #notice_rwd{
+      display: none;
+  }
+  
+  .notice_div{
+   padding: 1.5rem 1.6rem 2rem 1.6rem;
+  }
+  
+  .notice_div hr{
+   border: none;
+   border-bottom: 1px solid black;
+   margin-bottom: 1rem;
+  }
+  
+  .notice_zone li {
+    font-size: 12px;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.2rem;
+  }
+  
+  .notice_div h3{
+   margin-bottom: 0;
+  }
+  
+
+/* content RWD */
+@media (max-width: 575.98px){
+    /* .act_div h3{
+        color: green;
+    } */
+
+    .progress .line{
+        width: 16%;
+    }
+
+    
+    .act_row{
+        flex-direction: column;
+    }
+
+    .act_left{
+        width: 100%;
+    }
+
+    .act_right{
+        width: 100%;
+    }
+
+    #notice_normal{
+        display: none;
+    }
+
+    #notice_rwd{
+        display: block;
+    }
+
+    #search_btn{
+        display: block;
+    }
+
+    .time_choose .time_left{
+        width: 50%;
+    }
+
+    .time_choose .time_right{
+        width: 50%;
+    }
+
+    .left_side h3{
+        font-size: 1.2rem;
+    }
+
+    .choose_div label,
+    .choose_div select{
+        font-size: 16px;
+    }
+
+    .site_div .time_choose span,
+    .site_div .time_choose h4,
+    .site_div h4,
+    .site_div span,
+    .rnt {
+       font-size: 14px;
+    }
+
+    .site_div #rnt_total {
+        font-size: 18px;
+    }
+
+    .act_row{
+        padding: 8%;
+    }
+
+    .act_el input[type="text"],
+    .act_el textarea,
+    .act_el select{
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .act_el input[type="file"]{
+        width: 80%;
+        font-size: 16px;
+    }
+    
+    #act_start_date, #tk_start_date, #act_end_date, #tk_end_date{
+ width: 36.5%;
+ }
+
+    .act_el .preview {
+        width: 78%;
+        margin-left: 0;
+    }
+
+    .act_div .act_el label{
+        display: block;
+        margin-bottom: 0.8rem;
+        font-size: 16px;
+    }
+
+   .latest-news h1 {
+  font-size: 2rem;
+  left: 20%;
+  top: 80px;
+ }
+ .latest-news h3 {
+  font-size: 1.5rem;
+  left: 33%;
+  top: 120px;
+ }
+ .latest-news img {
+  width: 150px;
+  left: 30%;
+  top: -40px;
+ }
+
+    .cal_pop{
+        width: 90%;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        margin-left: -220px;
+        margin-top: -220px;
+    }
+
+    .calender_container .prev{
+        position: absolute;
+        top: -2.6rem;
+        left: 6.7rem;
+    }
+
+    .calender_container .next{
+        position: absolute;
+        top: -2.6rem;
+        right: 6.9rem;
+    }
+
+    .calender_container h5{
+        font-size: 26px;
+        margin-top: -.2rem;
+      }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px){
+    /* .act_div h3{
+        color: blue;
+    } */
+
+    .progress .line{
+        width: 21%;
+    }
+
+    .act_row{
+        padding: 8%;
+    }
+
+    .act_row{
+        flex-direction: column;
+    }
+
+    .act_left{
+        width: 100%;
+    }
+
+    .act_right{
+        width: 100%;
+    }
+
+    #notice_normal{
+        display: none;
+    }
+
+    #notice_rwd{
+        display: block;
+    }
+
+    #search_btn{
+        display: block;
+    }
+
+    .time_choose .time_left{
+        width: 50%;
+    }
+
+    .time_choose .time_right{
+        width: 50%;
+    }
+
+    .left_side h3{
+        font-size: 1.3rem;
+    }
+
+    .choose_div label,
+    .choose_div select{
+        font-size: 16px;
+    }
+
+    .site_div .time_choose span,
+    .site_div .time_choose h4,
+    .site_div h4,
+    .site_div span,
+    .rnt {
+       font-size: 16px;
+    }
+
+    .site_div #rnt_total {
+        font-size: 18px;
+    }
+
+    
+    .act_el input[type="text"],
+    .act_el textarea,
+    .act_el select{
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .act_el input[type="file"]{
+        width: 80%;
+        font-size: 16px;
+    }
+
+    #act_start_date, #tk_start_date, #act_end_date, #tk_end_date{
+ width: 37.5%;
+ }
+    
+    
+
+    .act_el .preview {
+        width: 78%;
+        margin-left: 0;
+    }
+
+    .act_div .act_el label{
+        display: block;
+        margin-bottom: 0.8rem;
+        font-size: 16px;
+    }
+
+    .latest-news h1 {
+  font-size: 2rem;
+  left: 48%;
+ }
+ .latest-news h3 {
+  font-size: 1.5rem;
+  left: calc(50% + 30px);
+  top: 50px;
+ }
+ .latest-news img {
+  width: 150px;
+  left: 30%;
+  top: -40px;
+ }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    /* .act_div h3{
+        color: red;
+    } */
+
+    .progress .line{
+        width: 28%;
+    }
+
+    .act_row{
+        flex-direction: column;
+    }
+
+    .act_left{
+        width: 100%;
+    }
+
+    .act_right{
+        width: 100%;
+    }
+
+    #notice_normal{
+        display: none;
+    }
+
+    #notice_rwd{
+        display: block;
+    }
+
+    #search_btn{
+        display: block;
+    }
+
+    .time_choose .time_left{
+        width: 50%;
+    }
+
+    .time_choose .time_right{
+        width: 50%;
+    }
+
+    .left_side h3{
+        font-size: 1.3rem;
+    }
+
+    .choose_div label,
+    .choose_div select{
+        font-size: 16px;
+    }
+
+    .site_div .time_choose span,
+    .site_div .time_choose h4,
+    .site_div h4,
+    .site_div span,
+    .rnt {
+       font-size: 16px;
+    }
+
+    .site_div #rnt_total {
+        font-size: 18px;
+    }
+
+    .act_el input[type="text"],
+    .act_el textarea,
+    .act_el select{
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .act_el input[type="file"]{
+        width: 80%;
+        font-size: 16px;
+    }
+ 
+
+    #act_start_date, #tk_start_date, #act_end_date, #tk_end_date{
+ width: 37.5%;
+ }
+
+    .act_el .preview {
+        width: 78%;
+    }
+
+   .latest-news h1 {
+  font-size: 2rem;
+  left: calc(50% + 120px);
+  top: 20px;
+ }
+ .latest-news h3 {
+  font-size: 1.4rem;
+  left: calc(50% + 180px);
+  top: 60px;
+ }
+ .latest-news img {
+  width: 150px;
+  top: -40px;
+ }
+
+
+} 
+
+@media (min-width: 992px) and (max-width: 1200px){
+    /* .act_div h3{
+        color: yellow;
+    } */
+    
+  .latest-news h1 {
+  font-size: 2rem;
+  left: calc(50% + 140px);
+  top: 20px;
+ }
+ .latest-news h3 {
+  left: calc(50% + 200px);
+  top: 65px;
+ }
+
+    .act_left label{
+        display: block;
+    }
+
+    .time_choose{
+        flex-direction: column;
+    }
+
+    .time_left::after{
+        opacity: 0;
+    }
+
+    .time_choose .time_left{
+        margin-bottom: 1rem;
+    }
+
+    .time_choose .time_right{
+        padding: 0;
+    }
+
+    .progress .line{
+        width: 33%;
+    }  
+}
+
+/* content RWD */

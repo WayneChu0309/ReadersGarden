@@ -1,0 +1,68 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel='stylesheet' href='${pageContext.request.contextPath}/parts/css/manager.css'>
+</head>
+<body onload="connect();">
+<jsp:useBean id="venSvc" class="com.vendoract.model.VendorActService"/>
+<section id="manager_functions">
+    <div class="function_container">
+      <div class="function">
+        <ul class="indoor">
+          <li>
+            <a href="#" id="vendor">廠商管理<span>${venSvc.findNoCheck()}</span></a>
+            <ul>
+              <li><a href="${pageContext.request.contextPath}/vendor/VendorServlet?action=getAll">廠商查詢</a></li>
+              <li><a href="${pageContext.request.contextPath}/vendoract/VendorActServlet?action=getAll">訂單查詢審核</a></li>
+            </ul>
+          <li>
+            <a href="#" id="artist">館藏管理</a>
+              <ul>
+                <li><a href="${pageContext.request.contextPath}/borrow/borrowManager.jsp">借閱管理</a></li>
+                <li><a href="${pageContext.request.contextPath}/stock/StockManagerHibernate.do?action=add">新增館藏</a></li>
+                <li><a href="${pageContext.request.contextPath}/stock/StockManagerUpdateHibernate.do?typeId=0">更新館藏</a></li>
+              </ul>
+          </li>
+          <li>
+            <a href="#" id="view">會員管理</a>
+                <ul>
+                  <li><a href="${pageContext.request.contextPath}/member/memberBackend.jsp" class="view">會員查詢</a></li>
+                </ul>
+          </li>  
+        </ul>
+
+      </div>
+    </div>
+</section>
+<script>
+		var MyPoint = "/vendoract/VendoractWebSocket";
+		var host = window.location.host;
+		var path = window.location.pathname;
+		var webCtx = path.substring(0, path.indexOf('/', 1));
+		var endPointURL = "ws://" + window.location.host + webCtx + MyPoint;
+		
+		function connect() {
+	  		webSocket = new WebSocket(endPointURL);
+
+	  		webSocket.addEventListener("message", function(e){
+	  			var info = JSON.parse(e.data);
+	  			$("a#vendor span").text(info);
+	  			
+	  			$("a#vendor span").addClass("newInfo");
+	  			
+	  			setTimeout(function(){
+	  				$("a#vendor span").removeClass("newInfo");
+	  			}, 1500)
+	  		})
+	  	}
+
+
+
+
+
+
+</script>
+</body>
+</html>

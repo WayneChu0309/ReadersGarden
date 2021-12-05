@@ -1,0 +1,81 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel='stylesheet' href='${pageContext.request.contextPath}/parts/css/header.css'>
+  <link rel='stylesheet' href='${pageContext.request.contextPath}/parts/css/header_media.css'>
+</head>
+<body>
+
+ <%--header start --%> 
+  <header id="header">
+    <div class="container">
+      <div class="row">
+        <div class="logo">
+          <a href="${pageContext.request.contextPath}/ReadersGarden"><img src="${pageContext.request.contextPath}/parts/icon/logo.svg" alt=""></a>
+        </div>
+        <input type="checkbox" id="nav-check">
+        <label for="nav-check" class="nav-toggler">
+            <span></span>
+        </label>
+        <div class="nav">
+          <ul class="page-item">
+            <li><a href="${pageContext.request.contextPath}/stock/StockServletHibernate.do?action=first&typeId=1&page=1">CirulationDesk</a></li>
+            <li><a href="${pageContext.request.contextPath}/vendor_ticketHome.jsp">Expo</a></li>
+            <li><a href="${pageContext.request.contextPath}/event/eventInfo.jsp">Group</a></li>
+            <li><a href="${pageContext.request.contextPath}/site/siteDescription.jsp">Rental</a></li>
+            <li><a href="${pageContext.request.contextPath}/home/map.jsp">Map</a></li>
+          </ul>
+          <ul class="member-item">
+          	<c:choose>
+          		<c:when test="${member.status eq '管理員'}">
+            		<li><a href="${pageContext.request.contextPath}/borrow/borrowManager.jsp">ManagerCenter</a></li>
+            	</c:when>
+            	
+	            <c:when test="${member.status eq '正常'}">
+	            	<li><a href="${pageContext.request.contextPath}/member/membercenter.jsp">MemberCenter</a></li>
+	            </c:when>
+	            
+	            <c:when test="${not empty vendorVO}">
+            		<li><a href="${pageContext.request.contextPath}/vendor/vendorInfo.jsp">VendorCenter</a></li>
+            	</c:when>
+	            
+	            <c:when test="${empty member}">
+	            	<li><a href="${pageContext.request.contextPath}/login/login.jsp">MemberCenter</a></li>
+	            </c:when>
+            
+
+            </c:choose>
+            
+            <c:choose>
+	            <c:when test="${member.status eq '管理員'}">
+	            	<li><a class="logout" href="${pageContext.request.contextPath}/Logout">管理員:${member.name}</a></li>
+	            </c:when>
+	            
+	            <c:when test="${member.status eq '正常'}">
+	            	<li><a class="logout" href="${pageContext.request.contextPath}/Logout">會員:${member.name}</a></li>
+	            </c:when>
+	            
+	            <c:when test="${not empty vendorVO}">
+	            	<li><a class="logout" href="${pageContext.request.contextPath}/Logout">廠商:${vendorVO.name}</a></li>
+	            </c:when>
+
+	            <c:when test="${empty member}">
+	            	<li><a href="${pageContext.request.contextPath}/login/login.jsp">Login/Register</a></li>
+	            </c:when>
+            </c:choose>
+            
+            <li><a href="${pageContext.request.contextPath}/ticket/ticketCart.jsp"><img src="${pageContext.request.contextPath}/parts/icon/cart.svg" alt="" id="cart"></a></li>
+            <li><a href="${pageContext.request.contextPath}/marks/MarksServlet"><img src="${pageContext.request.contextPath}/parts/icon/iconmonstr-favorite-2.svg" alt="" id="heart"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <%-- header end --%>
+  
+  <script src='${pageContext.request.contextPath}/jquery/jquery-3.6.0.min.js'></script>
+  <script src='${pageContext.request.contextPath}/parts/js/header.js'></script>
+</body>
+</html>

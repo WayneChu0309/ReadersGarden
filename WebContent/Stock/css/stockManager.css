@@ -1,0 +1,269 @@
+div#add_container{
+	max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    padding:40px;
+}
+
+button#add_items,
+button#submit,
+a#clear
+{
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #cd5c5c;
+    letter-spacing: 2px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all .5s linear;
+    line-height: 30px;
+    top: 10px;
+}
+
+button#add_items{
+	left: 60px;
+}
+
+button#submit{
+	left: 150px;
+}
+
+a#clear{
+	left: 240px;
+   	text-align: center;
+}
+
+
+
+button#add_items:hover,
+button#submit:hover,
+button#delete:hover,
+a#clear:hover{
+    background-color: white;
+    color:#cd5c5c;
+}
+
+button#delete{
+    width: 15%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: #cd5c5c;
+    letter-spacing: 2px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+
+button.result{
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #cd5c5c;
+    letter-spacing: 2px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+
+div.insert_items{
+    max-width: 1300px;
+    margin-left: 90px;
+    margin-top:10px;
+}
+div.insert_items form{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+div.insert_items form div{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    background-color: rgba(255,255,255,.8);
+    box-shadow:3px 3px 5px rgba(0,0,0,.5);
+    overflow: hidden;
+    max-height: auto;
+    position: relative;
+}
+
+
+div#result{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(135,135,135,.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+div#result.error{
+	display: flex;
+}
+
+div#result h1{
+    width: 100%;
+    color: red;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+div.insert_items form input,
+div.insert_items form textarea,
+div.insert_items form select,
+div.insert_items form p{
+    margin: 5px;
+    width: 100%;
+}
+
+div.insert_items form input,
+div.insert_items form select,
+div.insert_items form p,
+div.insert_items form h4{
+    height: 25px;
+}
+
+div.insert_items form p{
+    border: 1px solid black;
+    text-align: center;
+    line-height: 25px;
+}
+
+div.insert_items form h4{
+    line-height: 25px;
+    width: 25%;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+div.insert_items form input[type="text"]{
+    padding: 3px;
+}
+
+div.insert_items form input[type="range"]{
+    appearance: none;
+    overflow:hidden;
+    width:50%;
+    height:15px;
+    background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+    border-radius: 10px;
+    scroll-behavior: smooth;
+}
+
+div.insert_items form input[type="file"]{
+	margin: 0 5px; 
+	font-size: 14px;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-image: linear-gradient(45deg, #ee9ca7 0%, #ffdde1 100%);
+    width: 10%;
+    height: 15px;
+    border-radius: 50%;
+}
+
+div.insert_items form textarea{
+    resize: none;
+}
+
+div.insert_items form div img{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+@keyframes showAddItems {
+    0%{
+        max-height: 0px;
+    }   
+    100%{
+        max-height: 800px;
+    }
+}
+
+section.loadfilter{
+	background-color: hsla(100, 20%, 20%, .9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animateBg 3s linear infinite;
+    /* display: none; */
+}
+
+@keyframes animateBg {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+section.loadfilter div#loading{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+section.loadfilter div#loading span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(18deg * var(--i)));
+}
+
+section.loadfilter div#loading span::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background:#00ff0a;
+    box-shadow: 0 0 10px #00ff0a,
+                0 0 20px #00ff0a,
+                0 0 40px #00ff0a,
+                0 0 60px #00ff0a,
+                0 0 80px #00ff0a,
+                0 0 100px #00ff0a;
+    animation: animate 1s linear infinite;
+    animation-delay: calc(0.2s * var(--i));
+}
+@keyframes animate {
+    0%{
+        transform: scale(1);
+    }
+    80%,100%{
+        transform: scale(0);
+    }
+}

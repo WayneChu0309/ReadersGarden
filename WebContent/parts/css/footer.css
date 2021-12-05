@@ -1,0 +1,36 @@
+footer{
+    margin-top: 50px;
+    background-color: #fffafa;
+}
+
+footer .container{
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+footer .container .row{
+    width: 88%;
+    height: 100px;
+    line-height: 100px;
+}
+
+footer .container .row ul{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+
+footer .container .row ul li{
+    margin-left: 50px;
+}
+
+footer .container .row ul li img{
+    margin-right: 20px;
+    margin-bottom: -10px;
+}
+
+
+
+
+

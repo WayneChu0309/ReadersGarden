@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap');
+
+body{
+    background-image: url("../image/bg.png");
+    background-size: cover;
+    background-position: center center;
+    overflow-y: auto;
+}
+
+/* content start*/
+
+.content_row{
+  margin-top: 130px;
+  margin-bottom: 100px;
+  display: flex;
+}
+
+.content_left{
+  width: 200px;
+  margin: 0 auto;
+
+}
+
+.content_right{
+  width: 1100px;
+  padding: 0 5rem;
+}
+
+.content_label{
+  width: 180px;
+  background-color: white;
+  margin: 0 0 2rem 2rem;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 3px;
+  letter-spacing: 0.5rem;
+  display: block;
+  box-shadow: 1px 1px 3px rgb(143, 143, 143);
+  color: lightseagreen;
+  font-weight: 800;
+}
+
+.content_label:hover{
+  color: #707070;
+  font-weight: 800;
+}
+
+.now_choice,
+.now_choice:hover{
+  font-weight: 800;
+  color: lightseagreen;
+  cursor: default;
+  position: relative;
+  background-color: white;
+}
+
+.now_choice::after{
+  display: block;
+  content: "";
+  background-color: lightseagreen;
+  border-radius: 0 3px 3px 0;
+  height: 100%;
+  width: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.container_el{
+  width: 900px;
+  background-color: whitesmoke;
+  padding: 2.5rem;
+  border-radius: 3px;
+}
+
+.info_zone{
+  background-color: white;
+  border-radius: 3px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.info_zone h5{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #707070;
+  display: inline-block;
+}
+
+.info_zone select{
+	margin-left: 1rem;
+}
+
+.info_zone .status_select{
+	
+}
+
+.info_zone .act_select{
+	width: 300px;
+}
+
+#choose_btn{
+	margin: 0px 5px 8px 8px;
+    border-radius: 2px;
+    border: 1px solid #A7A7A7;
+    font: 15px/25px Microsoft JhengHei, sans-serif;
+    color: #000000;
+    cursor: pointer;
+    padding: 0px 10px;
+    background: linear-gradient(#F5F5F5, #E0E0E0);
+    position: relative;
+    text-align: center;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.my_act{
+	border: 1px solid lightgray;
+	padding: 1rem;
+	max-width: 100%;
+}
+
+.top_show{
+	display: flex;
+	padding: 5px;
+
+}
+
+#show_img{
+	width: 50%;
+}
+
+#show_detail{
+	width: 50%;
+	padding-left: 15px;
+}
+
+#show_img img{
+	max-width: 100%;
+}
+
+#show_detail h4{
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+
+#show_detail h6{
+	display: inline-block;
+	margin: 0 0 2px 15px;
+	font-weight: 500;
+	color: #707070;
+}
+
+#show_detail span{
+	margin-left: 8px;
+}
+
+#show_detail a{
+	display: inline-block;
+	margin-top: 15px;
+	margin-left: 15px;
+	text-decoration: underline;
+}
+
+.my_act hr{
+	border: none;
+	border-bottom: 0.5px solid #cacaca;
+	margin: 1rem 0;
+}
+
+.btm_show{
+	padding: 25px;	
+}
+
+
+.btm_show h6{
+	text-align: center;
+	margin-bottom: 15px;
+	color: #c1c1c1;
+	font-weight: 500;
+	font-size: 18px;
+	letter-spacing: 20px;
+}
+
+<!-- pop 視窗 -->
+
+.pop_bg{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: black;
+  opacity: 0.2;
+  display: none;
+}
+
+.pop_cancel{
+  position: fixed;
+  width: 380px;
+  height: 250px;
+  z-index: 1002;
+  left: 50%;
+  top: 50%;
+  padding: 40px 60px;
+  margin-left: -160px;
+  margin-top: -150px;
+  z-index: 1002;
+  background-color: white;
+  box-shadow: 1px 1px 3px rgb(228, 228, 228);
+  border-radius: 5px;
+  border: 10px solid rgb(187, 187, 187, 0.5);
+  display: none;
+}
+
+.pop_cancel h5{
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 20px;
+}
+
+.pop_cancel h6{
+  font-size: 14px;
+  color: rgb(180, 75, 75);
+  margin-bottom: 4rem;
+}
+
+.pop_cancel #not_cancel{
+  background-color: white;
+  margin-right: 2rem;
+  font-size: 14px;
+  border: 1px solid rgb(125, 189, 175);
+  color: rgb(125, 189, 175);
+  cursor: pointer;
+  padding: 2px 2.5px;
+  border-radius: 3px;
+  width: 100px;
+  height: 30px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  box-shadow: 1px 1px 1px lightgray;
+}
+
+.pop_cancel #confirm_cancel{
+  background-color: rgb(125, 189, 175);
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 2px 2.5px;
+  border-radius: 3px;
+  width: 100px;
+  height: 30px;
+  letter-spacing: 1px;
+  box-shadow: 1px 1px 1px lightgray;
+}
+
+#success_alert h5{
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.pop_cancel #cancel_success{
+  background-color: rgb(125, 189, 175);
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 2px 2.5px;
+  border-radius: 3px;
+  width: 100px;
+  height: 30px;
+  letter-spacing: 1px;
+  box-shadow: 1px 1px 1px lightgray;
+  display: block;
+  margin: 3rem auto;
+}

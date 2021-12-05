@@ -1,0 +1,180 @@
+/* details start */
+
+section.details {
+    margin-bottom: 40px;
+}
+
+section.details .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.details .activity {
+    width: 70%;
+    height: max-content;
+    padding: 24px 60px;
+    margin-top: 24px;
+    background-color: rgb(255, 255, 255, 0.6);
+    border-radius: 20px;
+}
+
+section.details .activity h1 {
+    font-weight: var(--heavy-font-weight);
+    font-size: 18px;
+    letter-spacing: 0.2em;
+}
+
+section.details .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.details .content table {
+    width: 80%;
+    margin: 40px 0 60px 0;
+}
+
+section.details td {
+    padding: 8px 24px;
+    letter-spacing: 0.2em;
+    vertical-align: top;
+}
+
+section.details td:first-of-type {
+    white-space: nowrap;
+}
+
+section.details td:last-of-type {
+    background-color: var(--light-color);
+}
+
+section.details tr:first-of-type td {
+    border-radius: 20px 20px 0 0;
+    padding-top: 24px;
+}
+
+section.details tr:last-of-type td {
+    border-radius: 0 0 20px 20px;
+    padding-bottom: 24px;
+}
+
+section.details .btns, section.create .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.details .btn-filled, section.create .btn-filled {
+    width: 200px;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-color);
+}
+
+section.details .btn-filled:first-of-type, section.create .btn-filled:first-of-type {
+	border:none;
+	background-color: var(--subtext-color);
+}
+
+section.details .btn-filled:last-of-type, section.create .btn-filled:last-of-type {
+	border:none;
+	margin-left: 8px;
+    margin-right: 8PX;
+    background-color: var(--main-color);
+}
+
+section.details .btn-filled:hover, section.create .btn-filled:hover {
+    background-color: var(--selected-color);
+}
+
+/* details end */
+
+/* create start */
+
+section.create {
+    margin-bottom: 40px;
+}
+
+section.create .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.create .form {
+    width: 75%;
+    height: max-content;
+    padding: 24px 60px;
+    margin-top: 24px;
+    background-color: var(--light-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.create .form h1 {
+    font-weight: var(--heavy-font-weight);
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    margin-bottom: 16px;
+}
+
+section.create .content {
+    width: 80%;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+section.create form {
+    width: 100%;
+}
+
+section.create .form-control {
+    width: 100%;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: flex-start;
+}
+
+section.create .form-control:last-of-type {
+    margin-bottom: 0;
+}
+
+section.create .form-control label {
+    width: 160px;
+    min-width: 160px;
+    display: inline-block;
+    letter-spacing: 0.2em;
+}
+
+section.create .form-control textarea {
+    width: 100%;
+    height: 80px;
+    resize: none;
+    border: 1px solid var(--tag-color);
+}
+
+section.create .form-control input {
+    width: 100%;
+    height: 28px;
+    border: 1px solid var(--tag-color);
+}
+
+section.create .form-control select {
+    width: 100%;
+    height: 28px;
+    border: 1px solid var(--tag-color);
+}
+
+section.create .form-control span {
+    padding: 0 16px;
+}
+
+/* create end */
